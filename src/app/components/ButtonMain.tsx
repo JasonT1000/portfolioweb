@@ -6,7 +6,7 @@ interface Props{
 
 const ButtonMain = ({title, description, updatePageSection}:Props) => {
     const handleClick = () =>{
-        updatePageSection(title)
+        updatePageSection(title.toUpperCase().replace(/\s/g, ''))
     }
 
     return ( 

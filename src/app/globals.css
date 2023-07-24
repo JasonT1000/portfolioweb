@@ -25,3 +25,33 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+.slide-in {
+  position: absolute;
+  overflow: hidden;
+}
+
+.from-left {
+  left: 100;
+  transform: translateX(-200%);
+  animation: slide-in-left 0.5s forwards;
+}
+
+@keyframes slide-in-left {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.from-right {
+  right: 100;
+  transform: translateX(200%);
+  animation: slide-in-right 0.5s forwards;
+}
+
+@keyframes slide-in-right {
+  to {
+    transform: translateX(0);
+  }
+}
