@@ -26,10 +26,9 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-
 .slide-in {
   position: absolute;
-  overflow: hidden;
+  /* overflow: scroll; */
 }
 
 .from-left {
@@ -54,4 +53,24 @@ body {
   to {
     transform: translateX(0);
   }
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 15px;
+  height: 20px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #f7f4ed91;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #e0cbcb86;
+  border-radius: 100vh;
+  border: 3px solid #f6f7ed;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c0a0b99c;
 }
