@@ -74,3 +74,8 @@ body {
 .scrollbar::-webkit-scrollbar-thumb:hover {
   background: #c0a0b99c;
 }
+
+.carousel .slide iframe{
+  width: 100% !important;
+  margin: 0 !important;
+}
