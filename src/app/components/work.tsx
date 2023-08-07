@@ -16,6 +16,7 @@ const Work = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
     const blenderImages:string[] = ['/Anvil1_a.png', '/Axe_1.png', '/AnvilAxe_1.png', '/AnvilAxe_4.png']
+    const wairoaApplianceCentreImages:string[] = ['/Anvil1_a.png', '/Axe_1.png', '/AnvilAxe_1.png', '/AnvilAxe_4.png']
 
     const handleClick = (index:number) =>{
         console.log("clicked carousel slide")
@@ -59,13 +60,13 @@ const Work = () => {
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}>
                     <div>
-                        <Youtube videoId='4HagyiqJM7g' opts={opts}/>
+                        <Youtube videoId='n1HBvVlhOEo' opts={opts}/>
                     </div>
                     <div>
-                        <Youtube videoId='qDTaFPzYvU4' opts={opts}/>
+                        <Youtube videoId='xD3Lu968Q0o' opts={opts}/>
                     </div>
                     <div>
-                        <Youtube videoId='ZNAqwJ7pXmY' opts={opts}/>
+                        <Youtube videoId='G_yu7YLvEew' opts={opts}/>
                     </div>
                 </Carousel>
                 <div>
@@ -91,7 +92,14 @@ const Work = () => {
             </div>
 
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='ZNAqwJ7pXmY' opts={opts}/>
+                <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}>
+                    <div>
+                        <Youtube videoId='amMytHUVcNw' opts={opts}/>
+                    </div>
+                    <div>
+                        <Youtube videoId='0aPOS-wi1ns' opts={opts}/>
+                    </div>
+                </Carousel>
                 <div>
                     <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                         Unreal Engine{' '}
@@ -100,6 +108,36 @@ const Work = () => {
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo debitis deleniti suscipit! Perspiciatis quam quisquam fuga corporis veritatis sapiente, consectetur iure, nemo praesentium nulla odit mollitia? Recusandae assumenda modi ducimus!
                     </p>
                 </div>                
+            </div>
+
+            <div className='grid'></div>
+            <h2 className={`mb-3 text-2xl text-center font-semibold`}>
+                Wairoa Appliance Centre{' '}
+            </h2>
+
+            <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
+                { showModal && createPortal(
+                    <ModalContent onClose={() => setShowModal(false)} imageSrc={blenderImages[currentImageIndex]}/>, document.body
+                )}
+                <Carousel infiniteLoop autoPlay showThumbs={false} onClickItem={handleClick}>
+                    {wairoaApplianceCentreImages.map((imgSrc, index) =>
+                    <div key={index}>
+                        <Image
+                            src={imgSrc}
+                            width={380}
+                            height={257}
+                            alt={''}
+                        />
+                    </div>)}
+                </Carousel>
+                <div>
+                    <h2 className={`mb-3 text-2xl text-center font-semibold`}>
+                        Web & Android App{' '}
+                    </h2>
+                    <p className={`m-0 max-w-full text-sm opacity-50`}>
+                        Created a stock taking application for web writting with HTML, javascript and CSS. I also created an accompanying Android application coded with ReactNative.
+                    </p>
+                </div>
             </div>
             
         </div>
