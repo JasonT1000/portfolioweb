@@ -2,9 +2,9 @@ import Youtube, { YouTubeProps } from 'react-youtube'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image'
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import ModalContent from './ModalContent';
+import ModalContent from './ImageModal';
 
 const Personal = () => {
     const opts: YouTubeProps['opts'] = {
@@ -27,7 +27,7 @@ const Personal = () => {
     return ( 
         <div className="overflow-y-auto h-[600px] w-[800px] slide-in from-left place-content-center space-y-10 scrollbar">
         
-        <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
+            <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 { showModal && createPortal(
                     <ModalContent onClose={() => setShowModal(false)} imageSrc={blenderImages[currentImageIndex]}/>, document.body
                 )}
@@ -53,7 +53,7 @@ const Personal = () => {
             </div>
 
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Carousel infiniteLoop autoPlay showThumbs={false}>
+                <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}>
                     <div>
                         <Youtube videoId='4HagyiqJM7g' opts={opts}/>
                     </div>

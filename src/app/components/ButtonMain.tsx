@@ -1,17 +1,33 @@
+import { useEffect, useState } from "react";
+
 interface Props{
     title: string,
     description: string,
-    updatePageSection: any,
+    updateActivePageSection: any,
+    activePageSection: string,
 }
 
-const ButtonMain = ({title, description, updatePageSection}:Props) => {
+const ButtonMain = ({title, description, updateActivePageSection, activePageSection}:Props) => {
+    const activeButtonClass:string = "border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-800/30 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30";
+    const inactiveButtonClass:string = "group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30";
+    const [currentButtonClass, setCurrentButtonClass] = useState(inactiveButtonClass)
+    
     const handleClick = () =>{
-        updatePageSection(title.toUpperCase().replace(/\s/g, ''))
+        updateActivePageSection(title.toUpperCase().replace(/\s/g, ''))
     }
+
+    useEffect(() => {
+        if(title.toUpperCase().replace(/\s/g, '') === activePageSection){
+            setCurrentButtonClass(activeButtonClass)
+        }
+        else{
+            setCurrentButtonClass(inactiveButtonClass)
+        }
+    }, [activePageSection])
 
     return ( 
         <button
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className={currentButtonClass}
             onClick={ handleClick } >
                 <h2 className={`mb-3 text-2xl font-semibold`}>
                     {title}{' '}
