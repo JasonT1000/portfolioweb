@@ -2,9 +2,10 @@ import Youtube, { YouTubeProps } from 'react-youtube'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image'
-import { useState } from 'react';
+import { ReactNode, RefObject, createRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import ModalContent from './ImageModal';
+import ImageModal from './ImageModal';
+import React from 'react';
 
 const Work = () => {
     const opts: YouTubeProps['opts'] = {
@@ -12,17 +13,19 @@ const Work = () => {
         width: '380'
     }
 
-    const [showModal, setShowModal] = useState(false)
+    const [showModal1, setShowModal1] = useState(false)
+    const [showModal2, setShowModal2] = useState(false)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
     const blenderImages:string[] = ['/Anvil1_a.png', '/Axe_1.png', '/AnvilAxe_1.png', '/AnvilAxe_4.png']
-    const wairoaApplianceCentreImages:string[] = ['/Anvil1_a.png', '/Axe_1.png', '/AnvilAxe_1.png', '/AnvilAxe_4.png']
 
-    const handleClick = (index:number) =>{
-        console.log("clicked carousel slide")
-        console.log("index is " + index)
+    const handleClick1 = (index:number, item: ReactNode) =>{
         setCurrentImageIndex(index)
-        setShowModal(true)
+        setShowModal1(true)
+    }
+    const handleClick2 = (index:number, item: ReactNode) =>{
+        setCurrentImageIndex(index)
+        setShowModal2(true)
     }
 
     return (
@@ -33,10 +36,10 @@ const Work = () => {
             </h2>
 
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                { showModal && createPortal(
-                    <ModalContent onClose={() => setShowModal(false)} imageSrc={blenderImages[currentImageIndex]}/>, document.body
+                { showModal1 && createPortal(
+                    <ImageModal onClose={() => setShowModal1(false)} imageSrc={blenderImages[currentImageIndex]}/>, document.body
                 )}
-                <Carousel infiniteLoop autoPlay showThumbs={false} onClickItem={handleClick}>
+                <Carousel infiniteLoop autoPlay showThumbs={false} onClickItem={handleClick1}>
                     {blenderImages.map((imgSrc, index) =>
                     <div key={index}>
                         <Image
@@ -52,7 +55,7 @@ const Work = () => {
                         GLIMS{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-sm opacity-50`}>
-                        I was apart of multiple projects over the last 2 years contracting for the Jean Swainson Foundation. My work ranged from javascript programming in Playcanvas to Blueprint programming in Unreal Engine. I designed an Unreal Engine level for a project that tied together with a players progress from the web application.
+                        I was apart of multiple projects over the last 2 years contracting for the Jean Swainson Foundation. My work ranged from javascript programming in Playcanvas to Blueprint programming in Unreal Engine to 3D model creation using Blender. I also got to a point where I could make small additions to the their online learning platform GLIMS using Vue.js
                     </p>
                 </div>
             </div>
@@ -74,19 +77,19 @@ const Work = () => {
                         Playcanvas{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-sm opacity-50`}>
-                        Learning Unreal Engine specifically in relation to Virtual Reality has kept me pretty busy. A ongoing project has been recreating places of my childhood in combination with movies that I grew up with.
+                        Using the online 3d engine Playcanvas. I created multiple projects. I worked on the coding which was done primarily in javascript with some HTML and CSS when UI was involved. For one project I was tasked with recreating an avatar system where you could buy and sell gear and view your avatar which was linked up the online learning platform GLIMS.
                     </p>
                 </div>
             </div>
 
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='ZNAqwJ7pXmY' opts={opts}/>
+                <Youtube videoId='sibpJ7O4gBo' opts={opts}/>
                 <div>
                     <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                         Blender{' '}
                     </h2>
-                    <p className={`m-0 text-sm opacity-50`}>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo debitis deleniti suscipit! Perspiciatis quam quisquam fuga corporis veritatis sapiente, consectetur iure, nemo praesentium nulla odit mollitia? Recusandae assumenda modi ducimus!
+                    <p className={`m-0 max-w-full text-sm opacity-50`}>
+                        Apart from some minor 3d asset creation the main project I was tasked with used Blender to create from real life building schematics a prefabricated building used for fire/police safety training. I recreated everything in a default building from the concrete foundation to the studs/joists to stairs, walls and even an example wall which had their patented fire insulation which allows these buildings to be continuously lit on fire and put out buy training fire fighters.
                     </p>
                 </div>                
             </div>
@@ -104,8 +107,8 @@ const Work = () => {
                     <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                         Unreal Engine{' '}
                     </h2>
-                    <p className={`m-0 text-sm opacity-50`}>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo debitis deleniti suscipit! Perspiciatis quam quisquam fuga corporis veritatis sapiente, consectetur iure, nemo praesentium nulla odit mollitia? Recusandae assumenda modi ducimus!
+                    <p className={`m-0 max-w-full text-sm opacity-50`}>
+                        I designed an Unreal Engine level for a project that tied together with a players progress from the online learning platform GLIMS. You could either progress through lessons/quests through the web application or complete quests through the Unreal game. I created 1 of about 3 levels which is shown in the videos. This was my first time creating something like this which I really enjoyed. I also got to do some blueprint programming to add things like different sounds playing as the player moved over different terrain and getting different fire particles to play during different times of the day/night cycle.
                     </p>
                 </div>                
             </div>
@@ -116,26 +119,28 @@ const Work = () => {
             </h2>
 
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                { showModal && createPortal(
-                    <ModalContent onClose={() => setShowModal(false)} imageSrc={blenderImages[currentImageIndex]}/>, document.body
+                { showModal2 && createPortal(
+                    <ImageModal onClose={() => setShowModal2(false)} imageSrc={'/WACStocktakerWeb.jpg'}/>, document.body
                 )}
-                <Carousel infiniteLoop autoPlay showThumbs={false} onClickItem={handleClick}>
-                    {wairoaApplianceCentreImages.map((imgSrc, index) =>
-                    <div key={index}>
+                <Carousel infiniteLoop autoPlay showThumbs={false} onClickItem={handleClick2}>
+                    <div>
                         <Image
-                            src={imgSrc}
+                            src={'/WACStocktakerWeb.jpg'}
                             width={380}
                             height={257}
                             alt={''}
                         />
-                    </div>)}
+                    </div>
+                    <div>
+                        <Youtube videoId='xjbrUTmjmmo' opts={opts}/>
+                    </div>
                 </Carousel>
                 <div>
                     <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                         Web & Android App{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-sm opacity-50`}>
-                        Created a stock taking application for web writting with HTML, javascript and CSS. I also created an accompanying Android application coded with ReactNative.
+                        For Wairoa Appliance Centre I created a stock taking application for Web written with HTML, javascript and CSS. I also created an accompanying Android application coded with ReactNative. I also setup and maintain their Wordpress website.
                     </p>
                 </div>
             </div>

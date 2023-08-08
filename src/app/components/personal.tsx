@@ -47,7 +47,7 @@ const Personal = () => {
                         Blender{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-sm opacity-50`}>
-                        I have been learning Blender in my spare time. It started by watching the now world renouned 'Donut' video. After completing that challenge I did an Anvil then picked my own object to model.
+                        I have been learning Blender for work and in my spare time. I started by watching the now world renouned 'Donut' video. After completing that challenge I did an Anvil then picked my own object to model of an axe which I had in the tool shed.
                     </p>
                 </div>
             </div>
@@ -69,56 +69,9 @@ const Personal = () => {
                         Unreal Engine{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-sm opacity-50`}>
-                        Learning Unreal Engine specifically in relation to Virtual Reality has kept me pretty busy. A ongoing project has been recreating places of my childhood in combination with movies that I grew up with.
+                        Learning Unreal Engine specifically in relation to Virtual Reality has kept me pretty busy. An ongoing project has been recreating places of friends and my childhood in combination with movies that we grew up with.
                     </p>
                 </div>
-            </div>
-
-            <div className="grid text-center lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='ZNAqwJ7pXmY' opts={opts}/>
-                <div>
-                    <h2 className={`mb-3 text-2xl text-center font-semibold`}>
-                        Blender{' '}
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo debitis deleniti suscipit! Perspiciatis quam quisquam fuga corporis veritatis sapiente, consectetur iure, nemo praesentium nulla odit mollitia? Recusandae assumenda modi ducimus!
-                    </p>
-                </div>                
-            </div>
-
-            <div className="grid text-center lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='ZNAqwJ7pXmY' opts={opts}/>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo debitis deleniti suscipit! Perspiciatis quam quisquam fuga corporis veritatis sapiente, consectetur iure, nemo praesentium nulla odit mollitia? Recusandae assumenda modi ducimus!
-                </p>
-            </div>
-
-            <div className="grid text-center lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='ZNAqwJ7pXmY' opts={opts}/>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo debitis deleniti suscipit! Perspiciatis quam quisquam fuga corporis veritatis sapiente, consectetur iure, nemo praesentium nulla odit mollitia? Recusandae assumenda modi ducimus!
-                </p>
-            </div>
-
-            <div className="grid text-center lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='ZNAqwJ7pXmY' opts={opts}/>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo debitis deleniti suscipit! Perspiciatis quam quisquam fuga corporis veritatis sapiente, consectetur iure, nemo praesentium nulla odit mollitia? Recusandae assumenda modi ducimus!
-                </p>
-            </div>
-
-            <div className="grid text-center lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='ZNAqwJ7pXmY' opts={opts}/>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo debitis deleniti suscipit! Perspiciatis quam quisquam fuga corporis veritatis sapiente, consectetur iure, nemo praesentium nulla odit mollitia? Recusandae assumenda modi ducimus!
-                </p>
-            </div>
-
-            <div className="grid text-center lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='ZNAqwJ7pXmY' opts={opts}/>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                    This is the last paragraph of content
-                </p>
             </div>
         </div>
      );
