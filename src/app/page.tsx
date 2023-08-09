@@ -29,7 +29,8 @@ export default function Home() {
       { activePageSection === PageSection.work && <Work/> }
       { activePageSection === PageSection.personal && <Personal/> }
 
-      <div className="absolute bottom-10 mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <div className="group absolute h-10 lg:h-auto hover:h-auto overflow-hidden bottom-0 lg:bottom-10 mb-12 lg:mb-0 grid text-center lg:grid-cols-4 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit">
+        <button className='group-hover:hidden lg:hidden mb-3 text-2xl font-semibold'>Menu</button>
         <ButtonMain title={"Work"} description={"The projects I have worked on over the last few years for employers."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>
         <ButtonMain title={"Personal projects"} description={"Some personal projects I have been working on in my spare time."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>
         <ButtonMain title={"Info"} description={"Some of my personal info."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>

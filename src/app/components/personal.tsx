@@ -8,8 +8,8 @@ import ModalContent from './ImageModal';
 
 const Personal = () => {
     const opts: YouTubeProps['opts'] = {
-        height: '257',
-        width: '380',
+        width: '100%',
+        height: '100%'
     }
 
     const [showModal, setShowModal] = useState(false)
@@ -25,7 +25,7 @@ const Personal = () => {
     }
 
     return ( 
-        <div className="overflow-y-auto h-[600px] w-[800px] slide-in from-left place-content-center space-y-10 scrollbar">
+        <div className="overflow-y-auto h-4/6 lg:h-[600px] lg:w-[800px] slide-in from-left place-content-center space-y-10 scrollbar">
         
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 { showModal && createPortal(
@@ -36,7 +36,7 @@ const Personal = () => {
                     <div key={index}>
                         <Image
                             src={imgSrc}
-                            width={380}
+                            width={960}
                             height={100}
                             alt={''}
                         />
@@ -55,13 +55,13 @@ const Personal = () => {
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}>
                     <div>
-                        <Youtube videoId='4HagyiqJM7g' opts={opts}/>
+                        <Youtube videoId='4HagyiqJM7g' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='qDTaFPzYvU4' opts={opts}/>
+                        <Youtube videoId='qDTaFPzYvU4' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='ZNAqwJ7pXmY' opts={opts}/>
+                        <Youtube videoId='ZNAqwJ7pXmY' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                 </Carousel>
                 <div>

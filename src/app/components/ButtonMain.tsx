@@ -9,7 +9,7 @@ interface Props{
 
 const ButtonMain = ({title, description, updateActivePageSection, activePageSection}:Props) => {
     const activeButtonClass:string = "border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-800/30 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30";
-    const inactiveButtonClass:string = "group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30";
+    const inactiveButtonClass:string = "group rounded-lg border border-stone-600 md:border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30";
     const [currentButtonClass, setCurrentButtonClass] = useState(inactiveButtonClass)
     
     const handleClick = () =>{
@@ -35,7 +35,7 @@ const ButtonMain = ({title, description, updateActivePageSection, activePageSect
                     -&gt;
                     </span>
                 </h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50 hidden md:block lg:block`}>
                     {description}
                 </p>
         </button>

@@ -9,8 +9,8 @@ import React from 'react';
 
 const Work = () => {
     const opts: YouTubeProps['opts'] = {
-        height: '257',
-        width: '380'
+        width: '100%',
+        height: '100%'
     }
 
     const [showModal1, setShowModal1] = useState(false)
@@ -29,7 +29,7 @@ const Work = () => {
     }
 
     return (
-        <div className="slide-in from-right h-[600px] w-[800px] overflow-y-auto place-content-center space-y-10 scrollbar">
+        <div className="slide-in from-right h-4/6 lg:h-[600px] lg:w-[800px] overflow-y-auto place-content-center space-y-10 scrollbar">
             
             <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                 Jean Swainson Foundation{' '}
@@ -44,7 +44,7 @@ const Work = () => {
                     <div key={index}>
                         <Image
                             src={imgSrc}
-                            width={380}
+                            width={960}
                             height={257}
                             alt={''}
                         />
@@ -63,13 +63,13 @@ const Work = () => {
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}>
                     <div>
-                        <Youtube videoId='n1HBvVlhOEo' opts={opts}/>
+                        <Youtube videoId='n1HBvVlhOEo' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='xD3Lu968Q0o' opts={opts}/>
+                        <Youtube videoId='xD3Lu968Q0o' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='G_yu7YLvEew' opts={opts}/>
+                        <Youtube videoId='G_yu7YLvEew' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                 </Carousel>
                 <div>
@@ -83,7 +83,7 @@ const Work = () => {
             </div>
 
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='sibpJ7O4gBo' opts={opts}/>
+                <Youtube videoId='sibpJ7O4gBo' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                 <div>
                     <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                         Blender{' '}
@@ -97,10 +97,10 @@ const Work = () => {
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}>
                     <div>
-                        <Youtube videoId='amMytHUVcNw' opts={opts}/>
+                        <Youtube videoId='amMytHUVcNw' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='0aPOS-wi1ns' opts={opts}/>
+                        <Youtube videoId='0aPOS-wi1ns' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                 </Carousel>
                 <div>
@@ -126,13 +126,13 @@ const Work = () => {
                     <div>
                         <Image
                             src={'/WACStocktakerWeb.jpg'}
-                            width={380}
+                            width={960}
                             height={257}
                             alt={''}
                         />
                     </div>
                     <div>
-                        <Youtube videoId='xjbrUTmjmmo' opts={opts}/>
+                        <Youtube videoId='xjbrUTmjmmo' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                 </Carousel>
                 <div>
