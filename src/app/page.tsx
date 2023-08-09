@@ -29,7 +29,7 @@ export default function Home() {
       { activePageSection === PageSection.work && <Work/> }
       { activePageSection === PageSection.personal && <Personal/> }
 
-      <div className="group absolute h-10 lg:h-auto hover:h-auto overflow-hidden bottom-0 lg:bottom-10 mb-12 lg:mb-0 grid text-center lg:grid-cols-4 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit">
+      <div className="group absolute h-10 lg:h-auto hover:h-auto overflow-hidden bottom-0 lg:bottom-10 mb-12 lg:mb-0 grid text-center lg:grid-cols-4 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit transition ease-in-out duration-300 ease-in-out">
         <button className='group-hover:hidden lg:hidden mb-3 text-2xl font-semibold'>Menu</button>
         <ButtonMain title={"Work"} description={"The projects I have worked on over the last few years for employers."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>
         <ButtonMain title={"Personal projects"} description={"Some personal projects I have been working on in my spare time."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>

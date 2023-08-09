@@ -2,7 +2,7 @@ import Youtube, { YouTubeProps } from 'react-youtube'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image'
-import { ReactNode, RefObject, createRef, useState } from 'react';
+import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import ImageModal from './ImageModal';
 import React from 'react';
@@ -19,17 +19,21 @@ const Work = () => {
 
     const blenderImages:string[] = ['/Anvil1_a.png', '/Axe_1.png', '/AnvilAxe_1.png', '/AnvilAxe_4.png']
 
-    const handleClick1 = (index:number, item: ReactNode) =>{
+    const handleClick1 = (index:number) =>{
         setCurrentImageIndex(index)
-        setShowModal1(true)
+        if(window.innerWidth >= 1024){
+            setShowModal1(true)
+        }
     }
-    const handleClick2 = (index:number, item: ReactNode) =>{
+    const handleClick2 = (index:number) =>{
         setCurrentImageIndex(index)
-        setShowModal2(true)
+        if(window.innerWidth >= 1024){
+            setShowModal2(true)
+        }
     }
 
     return (
-        <div className="slide-in from-right h-4/6 lg:h-[600px] lg:w-[800px] overflow-y-auto place-content-center space-y-10 scrollbar">
+        <div className="overflow-y-auto h-4/6 lg:h-[600px] lg:w-[820px] slide-in from-right place-content-center space-y-10 lg:pr-5 scrollbar">
             
             <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                 Jean Swainson Foundation{' '}

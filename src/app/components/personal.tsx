@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image'
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import ModalContent from './ImageModal';
+import ImageModal from './ImageModal';
 
 const Personal = () => {
     const opts: YouTubeProps['opts'] = {
@@ -18,18 +18,18 @@ const Personal = () => {
     const blenderImages:string[] = ['/Anvil1_a.png', '/Axe_1.png', '/AnvilAxe_1.png', '/AnvilAxe_4.png']
 
     const handleClick = (index:number) =>{
-        console.log("clicked carousel slide")
-        console.log("index is " + index)
         setCurrentImageIndex(index)
-        setShowModal(true)
+        if(window.innerWidth >= 1024){
+            setShowModal(true)
+        }
     }
 
     return ( 
-        <div className="overflow-y-auto h-4/6 lg:h-[600px] lg:w-[800px] slide-in from-left place-content-center space-y-10 scrollbar">
+        <div className="overflow-y-auto h-4/6 lg:h-[600px] lg:w-[820px] slide-in from-left place-content-center space-y-10 lg:pr-5 scrollbar">
         
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 { showModal && createPortal(
-                    <ModalContent onClose={() => setShowModal(false)} imageSrc={blenderImages[currentImageIndex]}/>, document.body
+                    <ImageModal onClose={() => setShowModal(false)} imageSrc={blenderImages[currentImageIndex]}/>, document.body
                 )}
                 <Carousel infiniteLoop autoPlay showThumbs={false} onClickItem={handleClick}>
                     {blenderImages.map((imgSrc, index) =>
@@ -37,7 +37,7 @@ const Personal = () => {
                         <Image
                             src={imgSrc}
                             width={960}
-                            height={100}
+                            height={257}
                             alt={''}
                         />
                     </div>)}
@@ -55,13 +55,13 @@ const Personal = () => {
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}>
                     <div>
-                        <Youtube videoId='4HagyiqJM7g' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
+                        <Youtube videoId='n1HBvVlhOEo' opts={opts} className='w-full lg:w-[390px] aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='qDTaFPzYvU4' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
+                        <Youtube videoId='qDTaFPzYvU4' opts={opts} className='w-full lg:w-[390px] aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='ZNAqwJ7pXmY' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
+                        <Youtube videoId='ZNAqwJ7pXmY' opts={opts} className='w-full lg:w-[390px] aspect-video'/>
                     </div>
                 </Carousel>
                 <div>
