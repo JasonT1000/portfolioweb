@@ -31,7 +31,22 @@ const Personal = () => {
                 { showModal && createPortal(
                     <ImageModal onClose={() => setShowModal(false)} imageSrc={blenderImages[currentImageIndex]}/>, document.body
                 )}
-                <Carousel infiniteLoop autoPlay showThumbs={false} onClickItem={handleClick}>
+                <Carousel infiniteLoop autoPlay showThumbs={false} onClickItem={handleClick}
+                    renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                        hasPrev && (
+                            <button type="button" onClick={onClickHandler} title={label} className="absolute h-[100px] md:h-[300px] lg:h-[100px] w-[30px] left-0 hover:bg-black z-10 opacity-20 hover:opacity-60 transition ease-in duration-350 carousel-customarrow">
+                                <p className='customArrow customArrow-left'></p>
+                            </button>
+                        )
+                    }
+                    renderArrowNext={(onClickHandler, hasNext, label) =>
+                        hasNext && (
+                            <button type="button" onClick={onClickHandler} title={label} className="absolute h-[100px] md:h-[300px] lg:h-[100px] w-[30px] right-0 hover:bg-black opacity-20 hover:opacity-60 z-2 transition ease-in duration-350 carousel-customarrow">
+                                <p className='customArrow customArrow-right'></p>
+                            </button>
+                        )
+                    }
+                >
                     {blenderImages.map((imgSrc, index) =>
                     <div key={index}>
                         <Image
@@ -53,7 +68,22 @@ const Personal = () => {
             </div>
 
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}>
+                <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}
+                    renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                        hasPrev && (
+                            <button type="button" onClick={onClickHandler} title={label} className="absolute h-[100px] md:h-[300px] lg:h-[100px] w-[30px] left-0 hover:bg-black z-10 opacity-20 hover:opacity-60 transition ease-in duration-350 carousel-customarrow">
+                                <p className='customArrow customArrow-left'></p>
+                            </button>
+                        )
+                    }
+                    renderArrowNext={(onClickHandler, hasNext, label) =>
+                        hasNext && (
+                            <button type="button" onClick={onClickHandler} title={label} className="absolute h-[100px] md:h-[300px] lg:h-[100px] w-[30px] right-0 hover:bg-black opacity-20 hover:opacity-60 z-2 transition ease-in duration-350 carousel-customarrow">
+                                <p className='customArrow customArrow-right'></p>
+                            </button>
+                        )
+                    }
+                >
                     <div>
                         <Youtube videoId='n1HBvVlhOEo' opts={opts} className='w-full lg:w-[390px] aspect-video'/>
                     </div>

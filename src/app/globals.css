@@ -80,3 +80,28 @@ body {
   width: 100% !important;
   margin: 0 !important;
 }
+
+.carousel-customarrow{
+  top: calc(50% - 50px);
+}
+
+.customArrow{
+  display: inline-block;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+}
+.customArrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.customArrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .carousel-customarrow{
+    top: calc(50% - 150px);
+  }
+}

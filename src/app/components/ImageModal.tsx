@@ -8,7 +8,7 @@ interface Props{
 const ImageModal = ({ onClose, imageSrc }: Props) => {
     return ( 
         <div className="absolute top-[20px] inset-x-0 w-5/6 max-h-screen mx-auto">
-            <button onClick={onClose} className='absolute w-16 h-8 top-0 right-0 bg-blue-900/50 rounded-md hover:bg-sky-900/80'>X</button>
+            <button onClick={onClose} className='absolute w-16 h-8 top-0 right-0 bg-red-600/80 rounded-md hover:bg-red-600 animate-bounce'>X</button>
             <Image
                 src={imageSrc}
                 width={1920}
