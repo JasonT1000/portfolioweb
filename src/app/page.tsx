@@ -5,6 +5,7 @@ import { useState } from 'react'
 import ButtonMain from './components/ButtonMain'
 import Work from './components/work'
 import Personal from './components/personal'
+import Info from './components/Info'
 
 export default function Home() {
   enum PageSection{
@@ -28,6 +29,7 @@ export default function Home() {
       </div>
       { activePageSection === PageSection.work && <Work/> }
       { activePageSection === PageSection.personal && <Personal/> }
+      { activePageSection === PageSection.info && <Info/> }
 
       <div className="group absolute h-10 lg:h-auto hover:h-auto overflow-hidden bottom-0 lg:bottom-10 mb-12 lg:mb-0 grid text-center lg:grid-cols-4 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit transition ease-in-out duration-300 ease-in-out">
         <button className='group-hover:hidden lg:hidden mb-3 text-2xl font-semibold'>Menu</button>

@@ -49,7 +49,7 @@ const Work = () => {
                 Jean Swainson Foundation{' '}
             </h2>
 
-            <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
+            <div className="grid text-center items-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 { showModal1 && createPortal(
                     <ImageModal onClose={() => setShowModal1(false)} imageSrc={glimsImages[currentImageIndex]}/>, document.body
                 )}
@@ -84,12 +84,12 @@ const Work = () => {
                         GLIMS{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-sm opacity-70`}>
-                        I was apart of multiple projects over the last 2 years contracting for the Jean Swainson Foundation. My work ranged from javascript programming in Playcanvas to Blueprint programming in Unreal Engine to 3D model creation using Blender. I Managed development of the online learning platform <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://afedsquad.co.nz/glims" target='_blank'>GLIMS</a> working closely with the head programmer. I also got to a point where I could make small fixes and additions using Vue2.js.
+                        I was involved in multiple projects over the last 2 years contracting for the Jean Swainson Foundation. My work ranged from javascript programming in Playcanvas to Blueprint programming in Unreal Engine to 3D model creation using Blender. I Managed development of the online learning platform <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://afedsquad.co.nz/glims" target='_blank'>GLIMS</a> working closely with the head programmer. I also got to a point where I could make small fixes and additions using Vue2.js.
                     </p>
                 </div>
             </div>
 
-            <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
+            <div className="grid text-center items-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}
                     renderArrowPrev={(onClickHandler, hasPrev, label) =>
                         hasPrev && (
@@ -107,13 +107,16 @@ const Work = () => {
                     }
                 >
                     <div>
+                        <Youtube videoId='f5VyI8u00W0' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
+                    </div>
+                    <div>
                         <Youtube videoId='n1HBvVlhOEo' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='xD3Lu968Q0o' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
+                        <Youtube videoId='G_yu7YLvEew' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='G_yu7YLvEew' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
+                        <Youtube videoId='xD3Lu968Q0o' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
                     </div>
                 </Carousel>
                 <div>
@@ -121,24 +124,12 @@ const Work = () => {
                         Playcanvas{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-sm opacity-70`}>
-                        Using the online 3d engine Playcanvas. I created multiple projects. I worked on the coding which was done primarily in javascript with some HTML and CSS when UI was involved. For one project I was tasked with recreating an avatar system where you can buy and sell gear and view your avatar which was linked up the online learning platform GLIMS. The latest project I did for <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://playcanv.as/p/G8x53x9D/" target='_blank'>FireFacilities</a> recreated a fire safety building where players are able to walk throughout the building to get a better idea of the layout and size.
+                        Using the online 3d engine Playcanvas. I created multiple projects. I worked on the coding which was done primarily in javascript with some HTML and CSS when UI was involved. For one project I was tasked with creating an interactive marae experience where as players completed lessons/quests on the GLIMS platform different parts of a marae were unlocked. You can also see information about specific carvings/buildings which is displayed on an ingame kiosk. For another project I recreated an Unreal Engine avatar system in Playcanvas where you can buy and sell gear and view your avatar which was linked up to the online learning platform GLIMS. The latest project I did for <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://playcanv.as/p/G8x53x9D/" target='_blank'>FireFacilities</a> recreated a fire safety building where players are able to walk throughout the building to get a better idea of the layout and size.
                     </p>
                 </div>
             </div>
 
-            <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='sibpJ7O4gBo' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
-                <div>
-                    <h2 className={`mb-3 text-2xl text-center font-semibold`}>
-                        Blender{' '}
-                    </h2>
-                    <p className={`m-0 max-w-full text-sm opacity-70`}>
-                        Apart from some minor 3d asset creation the main project I was tasked with used Blender to create from real life building schematics a prefabricated building used for fire/police safety training. I recreated everything in a default building from the concrete foundation to the studs/joists to stairs, walls and even an example wall which had their patented fire insulation which allows these buildings to be continuously lit on fire and put out buy training fire fighters.
-                    </p>
-                </div>                
-            </div>
-
-            <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
+            <div className="grid text-center items-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false}
                     renderArrowPrev={(onClickHandler, hasPrev, label) =>
                         hasPrev && (
@@ -172,6 +163,18 @@ const Work = () => {
                 </div>                
             </div>
 
+            <div className="grid text-center items-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
+                <Youtube videoId='sibpJ7O4gBo' opts={opts} className='w-full lg:w-[380px] aspect-video'/>
+                <div>
+                    <h2 className={`mb-3 text-2xl text-center font-semibold`}>
+                        Blender{' '}
+                    </h2>
+                    <p className={`m-0 max-w-full text-sm opacity-70`}>
+                        Apart from some minor 3d asset creation I was tasked with using Blender to create from real life building schematics a prefabricated building used for fire/police safety training. I recreated everything from the concrete foundation to the studs/joists to stairs, walls and even an example wall which had their patented fire insulation which allows these buildings to be continuously lit on fire and put out buy training fire fighters.
+                    </p>
+                </div>                
+            </div>
+
             <div className='grid'></div>
             <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                 Wairoa Appliance Centre{' '}
@@ -181,7 +184,7 @@ const Work = () => {
                 { showModal2 && createPortal(
                     <ImageModal onClose={() => setShowModal2(false)} imageSrc={'/WACStocktakerWeb.jpg'}/>, document.body
                 )}
-                <Carousel infiniteLoop autoPlay showThumbs={false} onClickItem={handleClick2}
+                <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false} onClickItem={handleClick2}
                     renderArrowPrev={(onClickHandler, hasPrev, label) =>
                         hasPrev && (
                             <button type="button" onClick={onClickHandler} title={label} className="absolute h-[100px] md:h-[300px] lg:h-[100px] w-[30px] left-0 hover:bg-black z-10 opacity-20 hover:opacity-60 transition ease-in duration-350 carousel-customarrow">
