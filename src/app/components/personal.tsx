@@ -49,8 +49,8 @@ const Personal = () => {
                 >
                     {blenderImages.map((imgSrc, index) =>
                         index === blenderImages.length-1 ?
-                        (<div>
-                            <Youtube videoId={imgSrc} opts={opts} className='w-full lg:w-full aspect-video'/>
+                        (<div key={index}>
+                            <Youtube videoId={imgSrc} opts={opts} className="w-full lg:w-full aspect-video"/>
                         </div>)
                         :
                         <div key={index}>
@@ -68,7 +68,7 @@ const Personal = () => {
                         Blender{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-md opacity-50`}>
-                        I have been learning Blender for work and in my spare time. I started by watching the now world renouned 'Donut' video. After completing that challenge I tried an Anvil then picked my own object to model which was an axe which I had in the tool shed. Going from taking reference photos to the modelling proccess to rendering was alot of fun.
+                        I have been learning Blender for work and in my spare time. I started by watching the now world renouned &apos;Donut&apos; video. After completing that challenge I tried an Anvil then picked my own object to model which was an axe which I had in the tool shed. Going from taking reference photos to the modelling proccess to rendering was alot of fun.
                     </p>
                 </div>
             </div>
@@ -116,7 +116,7 @@ const Personal = () => {
                         Unreal Engine{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-md opacity-50`}>
-                    Learning Unreal Engine specifically for Virtual Reality has kept me pretty busy. An ongoing project has been recreating places from childhood in combination with movies that I grew up with. The first few projects I had no experience with Blender and created some pretty bad models. I think I've come along way now though.
+                    Learning Unreal Engine specifically for Virtual Reality has kept me pretty busy. An ongoing project has been recreating places from childhood in combination with movies that I grew up with. The first few projects I had no experience with Blender and created some pretty bad models. I think I&apos;ve come along way now though.
                     </p>
                     <p>(Videos coming soon, VR headset died on me)</p>
                 </div>
@@ -128,7 +128,7 @@ const Personal = () => {
                         This website{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-md opacity-50`}>
-                        I created this website using react.js, next.js, typescript and tailwindcss. I had played around with react.js a while ago when playing with some gesture recognition scripts, but nothing like this. Basically I didn't have alot of experience in these frameworks and just wanted to have a play and see what they were like.
+                        I created this website using react.js, next.js, typescript and tailwindcss. I had played around with react.js a while ago when playing with some gesture recognition scripts, but nothing like this. Basically I didn&apos;t have alot of experience in these frameworks and just wanted to have a play and see what they were like.
                     </p>
                 </div>
             </div>

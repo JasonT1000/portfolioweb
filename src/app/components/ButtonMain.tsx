@@ -23,7 +23,7 @@ const ButtonMain = ({title, description, updateActivePageSection, activePageSect
         else{
             setCurrentButtonClass(inactiveButtonClass)
         }
-    }, [activePageSection])
+    }, [activePageSection, title])
 
     return ( 
         <button
