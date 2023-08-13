@@ -17,7 +17,7 @@ const Work = () => {
     const [showModal2, setShowModal2] = useState(false)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-    const glimsImages:string[] = ['/GLIMS_web_1.jpg', '/GLIMS_web_2.jpg', '/GLIMS_web_3.jpg']
+    const glimsImages:string[] = ['/portfolioweb/GLIMS_web_1.jpg', '/portfolioweb/GLIMS_web_2.jpg', '/portfolioweb/GLIMS_web_3.jpg']
 
     const handleClick1 = (index:number) =>{
         setCurrentImageIndex(index)
@@ -192,7 +192,7 @@ const Work = () => {
                     >
                         <div>
                             <Image
-                                src={'/WACStocktakerWeb.jpg'}
+                                src={'/portfolioweb/WACStocktakerWeb.jpg'}
                                 width={960}
                                 height={257}
                                 alt={''}

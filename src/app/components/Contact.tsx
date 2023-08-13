@@ -11,7 +11,7 @@ const Contact = () => {
                     <div>
                         <a href="https://www.linkedin.com/in/jason-tollison-63443018b/" target='_blank' className='w-fit flex-initial flex items-center float-left lg:hover:bg-white/50 rounded'>
                             <Image
-                                src={'/In-Blue-34.png'}
+                                src={'/portfolioweb/In-Blue-34.png'}
                                 width={34}
                                 height={34}
                                 alt={''}
@@ -25,7 +25,7 @@ const Contact = () => {
                     <div>
                         <a href="https://github.com/JasonT1000" target='_blank' className='w-fit flex-initial flex items-center float-left lg:hover:bg-white/50 rounded'>
                             <Image
-                                src={'/github-mark-white.png'}
+                                src={'/portfolioweb/github-mark-white.png'}
                                 width={34}
                                 height={33}
                                 alt={''}

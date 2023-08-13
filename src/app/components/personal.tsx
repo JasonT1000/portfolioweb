@@ -15,7 +15,7 @@ const Personal = () => {
     const [showModal, setShowModal] = useState(false)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-    const blenderImages:string[] = ['/Anvil1_a.png', '/Axe_1.png', '/AnvilAxe_1.png', '/AnvilAxe_4.png', 'lev39HNa8nU']
+    const blenderImages:string[] = ['/portfolioweb/Anvil1_a.png', '/portfolioweb/Axe_1.png', '/portfolioweb/AnvilAxe_1.png', '/portfolioweb/AnvilAxe_4.png', 'lev39HNa8nU']
 
     const handleClick = (index:number) =>{
         setCurrentImageIndex(index)
