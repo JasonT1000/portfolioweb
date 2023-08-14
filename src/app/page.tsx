@@ -27,13 +27,15 @@ export default function Home() {
   }
 
   const handleMobileNavClick = () =>{
-    setShowMobileNav(!showMobileNav)
+    setShowMobileNav(true)
   }
 
   useEffect(() => {
-      if(window.innerWidth <= 1024){
-        setIsOnMobileDevice(true)
+    if(window.innerWidth <= 1024){
+      setIsOnMobileDevice(true)
     }
+    console.log("device width is")
+    console.log(window.innerWidth)
   }, [])
 
   return (
@@ -54,9 +56,9 @@ export default function Home() {
         <ButtonMain title={"Contact"} description={"Ways to contact me."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>
       </div>}
       { isOnMobileDevice && !showMobileNav && 
-        <button className='mb-3 text-2xl font-semibold' onClick={handleMobileNavClick}>Menu</button>
+        <button className='absolute h-10 bottom-0 mb-3 text-2xl font-semibold' onClick={handleMobileNavClick}>Menu</button>
       }
-      { showMobileNav &&
+      { isOnMobileDevice && showMobileNav &&
         <div className="group absolute lg:h-auto hover:h-auto overflow-hidden bottom-0 lg:bottom-10 mb-12 lg:mb-0 grid text-center lg:grid-cols-4 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit transition ease-in-out duration-300 ease-in-out">
           <ButtonMain title={"Work"} description={"The projects I have worked on over the last few years for employers."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>
           <ButtonMain title={"Personal projects"} description={"Some personal projects I have been working on in my spare time."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>
