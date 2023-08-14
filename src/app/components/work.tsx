@@ -74,7 +74,7 @@ const Work = () => {
                         GLIMS{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-md opacity-50`}>
-                        I was involved in multiple projects over the last 2 years contracting for the Jean Swainson Foundation. My work ranged from javascript programming in Playcanvas to Blueprint programming in Unreal Engine to 3D model creation using Blender. I Managed development of the online learning platform <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://afedsquad.co.nz/glims" target='_blank'>GLIMS</a> working closely with the head programmer. I also got to a point where I could make small fixes and additions using Vue2.js.
+                        I was involved in multiple projects over the last 2 years contracting for the Jean Swainson Foundation. My work ranged from javascript programming in Playcanvas to Blueprint programming in Unreal Engine to 3D model creation using Blender. I Managed development of the online learning platform <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://afedsquad.co.nz/glims" target='_blank'>GLIMS</a> working closely with the lead programmer. I also got to a point where I could make small fixes and additions to the platform which uses Vue2.js.
                     </p>
                 </div>
             </div>
