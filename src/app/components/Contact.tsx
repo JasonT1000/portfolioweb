@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Contact = () => {
     return ( 
-        <div className="overflow-y-auto h-3/4 lg:w-[900px] slide-in from-left place-content-center space-y-10 px-5 lg:pr-5 scrollbar">
+        <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-left place-content-center space-y-10 px-5 lg:pr-5 scrollbar">
             <div>
                 <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                     Networks{' '}

@@ -75,7 +75,7 @@ const Work = () => {
                         GLIMS{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-md opacity-50`}>
-                        I was involved in multiple projects over the last 2 years contracting for the Jean Swainson Foundation. My work ranged from javascript programming in Playcanvas to Blueprint programming in Unreal Engine to 3D model creation using Blender. I Managed development of the online learning platform <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://afedsquad.co.nz/glims" target='_blank'>GLIMS</a> working closely with the lead programmer. I also got to a point where I could make small fixes and additions to the platform which uses Vue2.js.
+                        I was involved in multiple projects over the last 2 years contracting for the Jean Swainson Foundation. My work ranged from javascript programming in Playcanvas to Blueprint programming in Unreal Engine to 3D model creation using Blender. I Managed development of their online learning platform <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://afedsquad.co.nz/glims" target='_blank'>GLIMS</a> working closely with the lead programmer. I also got to a point where I could make small fixes and additions to the platform which uses Vue2.js.
                     </p>
                 </div>
             </div>
@@ -115,7 +115,7 @@ const Work = () => {
                         Playcanvas{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-md opacity-50`}>
-                        Using the online 3d engine Playcanvas. I created multiple projects. I worked on the coding which was done primarily in javascript with some HTML and CSS when UI was involved. For one project I was tasked with creating an interactive marae experience where as players completed lessons/quests on the GLIMS platform different parts of a marae were unlocked. You can also see information about specific carvings/buildings which is displayed on an ingame kiosk. For another project I recreated an Unreal Engine avatar system in Playcanvas where you can buy and sell gear and view your avatar which was linked up to the online learning platform GLIMS. The latest project I did for <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://playcanv.as/p/G8x53x9D/" target='_blank'>FireFacilities</a> recreated a fire safety building where players are able to walk throughout the building to get a better idea of the layout and size.
+                        Using the online 3d engine Playcanvas. I created multiple projects. I worked on the coding which was done primarily in javascript with some HTML and CSS when UI was involved. For one project I was tasked with creating an interactive marae experience where as players completed lessons/quests on the GLIMS platform different parts of a marae were unlocked. You can also see information about specific carvings/buildings which is displayed on an in game kiosk. For another project I recreated an Unreal Engine avatar system in Playcanvas where you can buy and sell gear and view your avatar which was linked up to the online learning platform GLIMS. The latest project I did for <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://playcanv.as/p/G8x53x9D/" target='_blank'>FireFacilities</a> recreated a fire safety building where players are able to walk throughout the building to get a better idea of the layout and size.
                     </p>
                 </div>
             </div>
@@ -208,7 +208,7 @@ const Work = () => {
                             Web & Android App{' '}
                         </h2>
                         <p className={`m-0 max-w-full text-md opacity-50`}>
-                            For Wairoa Appliance Centre I created a stock taking application for Web written with HTML, javascript and CSS. I also created an accompanying Android application coded with ReactNative. I also setup and maintain their Wordpress website.
+                            For a small retail appliance shop in Wairoa called Wairoa Appliance Centre I created a stock taking application for Web written with HTML, javascript and CSS. I also created an accompanying Android application coded with ReactNative. I also setup and maintain their Wordpress website.
                         </p>
                     </div>
                 </div>
