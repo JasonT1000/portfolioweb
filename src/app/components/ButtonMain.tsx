@@ -29,13 +29,13 @@ const ButtonMain = ({title, description, updateActivePageSection, activePageSect
         <button
             className={currentButtonClass}
             onClick={ handleClick } >
-                <h2 className={`lg:mb-3 text-2xl font-semibold`}>
+                <h2 className={`lg:mb-3 text-lg 2xl:text-2xl font-semibold`}>
                     {title}{' '}
                     <span className="inline-block transition-transform group-hover/navButton:translate-x-1 motion-reduce:transform-none">
                     -&gt;
                     </span>
                 </h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50 hidden md:block lg:block`}>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50 hidden short:hidden 2xl:block`}>
                     {description}
                 </p>
         </button>

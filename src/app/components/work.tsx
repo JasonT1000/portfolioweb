@@ -18,6 +18,7 @@ const Work = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
     const glimsImages:string[] = ['/portfolioweb/GLIMS_web_1.jpg', '/portfolioweb/GLIMS_web_2.jpg', '/portfolioweb/GLIMS_web_3.jpg']
+    const wacImages:string[] = ['/portfolioweb/WACStocktakerWeb.jpg']
 
     const handleClick1 = (index:number) =>{
         setCurrentImageIndex(index)
@@ -33,7 +34,7 @@ const Work = () => {
     }
 
     return (
-        <div className="overflow-y-auto h-3/4 lg:w-[900px] slide-in from-right place-content-center space-y-20 px-5 lg:pr-5 scrollbar">
+        <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-right place-content-center space-y-20 px-5 lg:pr-5 scrollbar">
             
             <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                 Jean Swainson Foundation{' '}
@@ -172,7 +173,7 @@ const Work = () => {
 
                 <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                     { showModal2 && createPortal(
-                        <ImageModal onClose={() => setShowModal2(false)} imageSrc={'/WACStocktakerWeb.jpg'}/>, document.body
+                        <ImageModal onClose={() => setShowModal2(false)} imageSrc={wacImages[0]}/>, document.body
                     )}
                     <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false} className='mb-2' onClickItem={handleClick2}
                         renderArrowPrev={(onClickHandler, hasPrev, label) =>
@@ -192,7 +193,7 @@ const Work = () => {
                     >
                         <div>
                             <Image
-                                src={'/portfolioweb/WACStocktakerWeb.jpg'}
+                                src={wacImages[0]}
                                 width={960}
                                 height={257}
                                 alt={''}

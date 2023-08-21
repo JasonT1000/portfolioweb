@@ -25,7 +25,7 @@ const Personal = () => {
     }
 
     return ( 
-        <div className="overflow-y-auto h-3/4 lg:w-[900px] slide-in from-left place-content-center space-y-10 px-5 lg:pr-5 scrollbar">
+        <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-left place-content-center space-y-10 px-5 lg:pr-5 scrollbar">
         
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 { showModal && createPortal(
