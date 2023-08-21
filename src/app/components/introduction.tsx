@@ -13,7 +13,7 @@ const Introduction = () => {
             <div className={'space-y-2'}>
                 <h3 className={`m-0 max-w-full text-md opacity-95`}>Coding</h3>
                 <p className={`m-0 max-w-full text-md opacity-70`}>
-                    This website was coded using React.js/Next.js, TailwindCSS and Typescript. I hadn't even heard of Tailwind before starting this site and I only had limited experience with the others so this was a great opportunity to learn something new.
+                    This website was coded using React.js/Next.js, TailwindCSS and Typescript. I hadn&apos;t even heard of Tailwind before starting this site and I only had limited experience with the others so this was a great opportunity to learn something new.
                 </p>
                 <p className={`m-0 max-w-full text-md opacity-70`}>
                     My contact details can be found using the navigation buttons below if you would like to get in touch.
