@@ -80,10 +80,6 @@ body {
   background: #c0a0b99c;
 }
 
-.calculated-height{
-  height: calc(100% - 223px);
-}
-
 /* ------------------------ Carosel -----------------------------*/
 
 .carousel .slide iframe{
@@ -113,5 +109,17 @@ body {
 @media (min-width: 768px) and (max-width: 1024px) {
   .carousel-customarrow{
     top: calc(50% - 150px);
+  }
+}
+
+/* ------------------------ Content Sections -----------------------------*/
+
+.calculated-height{
+  height: calc(100% - 223px);
+}
+
+@media (max-width: 1024px) {
+  .calculated-height{
+    height: calc(100% - 130px);
   }
 }
