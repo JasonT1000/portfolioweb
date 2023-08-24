@@ -73,7 +73,7 @@ const Personal = () => {
                 </div>
             </div>
 
-            {/* <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
+            <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 <Carousel infiniteLoop autoPlay className='mb-2' showThumbs={false} showIndicators={false}
                     renderArrowPrev={(onClickHandler, hasPrev, label) =>
                         hasPrev && (
@@ -91,13 +91,13 @@ const Personal = () => {
                     }
                 >
                     <div>
-                        <Youtube videoId='n1HBvVlhOEo' opts={opts} className='w-full lg:w-full aspect-video'/>
+                        <Youtube videoId='KwcxnjQw59g' opts={opts} className='w-full lg:w-full aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='qDTaFPzYvU4' opts={opts} className='w-full lg:w-full aspect-video'/>
+                        <Youtube videoId='XAEgGmiAOuE' opts={opts} className='w-full lg:w-full aspect-video'/>
                     </div>
                     <div>
-                        <Youtube videoId='ZNAqwJ7pXmY' opts={opts} className='w-full lg:w-full aspect-video'/>
+                        <Youtube videoId='D3BaPQ1JKSI' opts={opts} className='w-full lg:w-full aspect-video'/>
                     </div>
                 </Carousel>
                 <div>
@@ -105,12 +105,12 @@ const Personal = () => {
                         Unreal Engine{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-md opacity-50`}>
-                        Learning Unreal Engine specifically for Virtual Reality has kept me pretty busy. An ongoing project has been recreating places from childhood in combination with movies that I grew up with. The first few projects I had no experience with Blender and created some pretty bad models. I think I've come along way now though.
+                        Learning Unreal Engine specifically for Virtual Reality has kept me pretty busy. An ongoing project has been recreating places from childhood in combination with movies/games that I grew up with. These are the first projects I made with no prior knowledge of Unreal Engine or Virtual reality or modelling. I had no experience with Blender and created some pretty bad models. I will be continuing on with this project shortly and hopefully can use my new skills and create some good stuff.
                     </p>
                 </div>
-            </div> */}
+            </div>
 
-            <div className="grid text-center gap-x-5 lg:mb-0 lg:text-left">
+            {/* <div className="grid text-center gap-x-5 lg:mb-0 lg:text-left">
             <div>
                     <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                         Unreal Engine{' '}
@@ -120,7 +120,7 @@ const Personal = () => {
                     </p>
                     <p>(Videos coming soon, VR headset died on me)</p>
                 </div>
-            </div>
+            </div> */}
 
             <div className="grid text-center gap-x-5 lg:mb-0 lg:text-left">
             <div>
