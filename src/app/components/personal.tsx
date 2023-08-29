@@ -16,6 +16,7 @@ const Personal = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
     const blenderImages:string[] = ['/portfolioweb/Anvil1_a.png', '/portfolioweb/Axe_1.png', '/portfolioweb/AnvilAxe_1.png', '/portfolioweb/AnvilAxe_4.png', 'lev39HNa8nU']
+    // const blenderImages:string[] = ['/Anvil1_a.png', '/Axe_1.png', '/AnvilAxe_1.png', '/AnvilAxe_4.png', 'lev39HNa8nU']
 
     const handleClick = (index:number) =>{
         setCurrentImageIndex(index)
@@ -110,17 +111,17 @@ const Personal = () => {
                 </div>
             </div>
 
-            {/* <div className="grid text-center gap-x-5 lg:mb-0 lg:text-left">
-            <div>
+            <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
+                <Youtube videoId='cRcMj7uK9Js' opts={opts} className='w-full lg:w-full aspect-video mb-2'/>
+                <div>
                     <h2 className={`mb-3 text-2xl text-center font-semibold`}>
-                        Unreal Engine{' '}
+                        Animations{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-md opacity-50`}>
-                    Learning Unreal Engine specifically for Virtual Reality has kept me pretty busy. An ongoing project has been recreating places from childhood in combination with movies that I grew up with. The first few projects I had no experience with Blender and created some pretty bad models. I think I&apos;ve come along way now though.
+                    Currently only have 1 animation which I submitted to an online render challenge. The theme was 'boss fight' where a basic camera animation and point of interest was given and you had to make the rest up. I chose a boss fight where the hero and boss were intangled in a dance fight to the death.
                     </p>
-                    <p>(Videos coming soon, VR headset died on me)</p>
                 </div>
-            </div> */}
+            </div>
 
             <div className="grid text-center gap-x-5 lg:mb-0 lg:text-left">
             <div>
