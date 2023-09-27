@@ -172,9 +172,6 @@ const Work = () => {
                 </h2>
 
                 <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                    { showModal2 && createPortal(
-                        <ImageModal onClose={() => setShowModal2(false)} imageSrc={wacImages[0]}/>, document.body
-                    )}
                     <Carousel infiniteLoop autoPlay showThumbs={false} showIndicators={false} className='mb-2' onClickItem={handleClick2}
                         renderArrowPrev={(onClickHandler, hasPrev, label) =>
                             hasPrev && (
@@ -192,12 +189,7 @@ const Work = () => {
                         }
                     >
                         <div>
-                            <Image
-                                src={wacImages[0]}
-                                width={960}
-                                height={257}
-                                alt={''}
-                            />
+                            <Youtube videoId='grDMeD2c4Yc' opts={opts} className='w-full lg:w-full aspect-video'/>
                         </div>
                         <div>
                             <Youtube videoId='xjbrUTmjmmo' opts={opts} className='w-full lg:w-full aspect-video'/>
@@ -208,7 +200,7 @@ const Work = () => {
                             Web & Android App{' '}
                         </h2>
                         <p className={`m-0 max-w-full text-md opacity-50`}>
-                            For a small retail appliance shop in Wairoa called Wairoa Appliance Centre I created a stock taking application for Web written with HTML, javascript and CSS. I also created an accompanying Android application coded with ReactNative. I also setup and maintain their Wordpress website.
+                            For a small retail appliance shop in Wairoa called Wairoa Appliance Centre I am creating a stock taking application for Web previously written with HTML, javascript and CSS. I have rewritten it in React with Typescript and created a Nodejs server which will run along side it. I also created an accompanying Android application coded with ReactNative. I also setup and maintain their Wordpress website.
                         </p>
                     </div>
                 </div>
