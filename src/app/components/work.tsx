@@ -189,7 +189,7 @@ const Work = () => {
                         }
                     >
                         <div>
-                            <Youtube videoId='grDMeD2c4Yc' opts={opts} className='w-full lg:w-full aspect-video'/>
+                            <Youtube videoId='x6I5056uxFo' opts={opts} className='w-full lg:w-full aspect-video'/>
                         </div>
                         <div>
                             <Youtube videoId='xjbrUTmjmmo' opts={opts} className='w-full lg:w-full aspect-video'/>
