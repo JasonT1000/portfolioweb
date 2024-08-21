@@ -27,7 +27,19 @@ const Personal = () => {
 
     return ( 
         <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-left place-content-center space-y-10 px-5 lg:pr-5 scrollbar">
-        
+
+            <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
+                <Youtube videoId='BTARnn9_brI' opts={opts} className='w-full lg:w-full aspect-video mb-2'/>
+                <div>
+                    <h2 className={`mb-3 text-2xl text-center font-semibold`}>
+                        PERN stack{' '}
+                    </h2>
+                    <p className={`m-0 max-w-full text-md opacity-50`}>
+                    I started a project for an early childcare centre as the software solutions they had tried did not do the things that they required. I started with an interview with the manager of a local early child care centre. Then went about doing research on what was needed ie integration with government systems, database creation, api calls. I then did some short tutorials online to get back into relational databases and login systems etc. I designed the UI using AI tools which was a useful learning experience and very helpful. I then started using AI tools to help with coding,which I found to be a useful tool. This is still very much a work in progress and after starting with the database and backend routes setup I have only just started the front end development. The frontend has been done using Reactjs with Typescript. The database is postgreSQL with nodejs as the backend.
+                    </p>
+                </div>
+            </div>
+
             <div className="grid text-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
                 { showModal && createPortal(
                     <ImageModal onClose={() => setShowModal(false)} imageSrc={blenderImages[currentImageIndex]}/>, document.body
@@ -124,7 +136,7 @@ const Personal = () => {
             </div>
 
             <div className="grid text-center gap-x-5 lg:mb-0 lg:text-left">
-            <div>
+                <div>
                     <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                         This website{' '}
                     </h2>

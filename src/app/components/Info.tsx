@@ -24,6 +24,13 @@ const Info = () => {
                     Throughout the year predominantly doing work in Blender to create a virtual experience for a company that builds prefab steel construction buildings for fire safety teams mainly in the United States. Also continuing to develop the GLIMS platform by working with the lead programmer and performing minor changes when needed.
                 </p>
             </div>
+
+            <div className={'space-y-2'}>
+                <h3 className={`m-0 max-w-full text-md opacity-95`}>Through 2024</h3>
+                <p className={`m-0 max-w-full text-md opacity-70`}>
+                    Minor bug fixes, UI changes and keeping a few wordpress websites up to date. Otherwise working on an early childcare application.
+                </p>
+            </div>
         </div> 
      );
 }
