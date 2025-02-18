@@ -2,7 +2,7 @@ import Youtube, { YouTubeProps } from 'react-youtube'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image'
-import { CSSProperties, useState } from 'react';
+import { CSSProperties, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import ImageModal from './ImageModal';
 import React from 'react';
@@ -13,9 +13,11 @@ const Work = () => {
         height: '100%'
     }
 
+    // State
     const [showModal1, setShowModal1] = useState(false)
     const [showModal2, setShowModal2] = useState(false)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const [carouselOneAutoPlay, setCarouselOneAutoPlay] = useState(true)
 
     const glimsImages:string[] = ['/portfolioweb/GLIMS_web_1.jpg', '/portfolioweb/GLIMS_web_2.jpg', '/portfolioweb/GLIMS_web_3.jpg']
     const wacImages:string[] = ['/portfolioweb/WACStocktakerWeb.jpg']
@@ -41,43 +43,15 @@ const Work = () => {
             </h2>
 
             <div className="grid text-center items-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                { showModal1 && createPortal(
-                    <ImageModal onClose={() => setShowModal1(false)} imageSrc={glimsImages[currentImageIndex]}/>, document.body
-                )}
-                <Carousel infiniteLoop autoPlay className='mb-2' showThumbs={false} onClickItem={handleClick1}
-                    renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                        hasPrev && (
-                            <button type="button" onClick={onClickHandler} title={label} className="absolute h-[100px] md:h-[300px] lg:h-[100px] w-[30px] left-0 hover:bg-black z-10 opacity-20 hover:opacity-60 transition ease-in duration-350 carousel-customarrow">
-                                <p className='customArrow customArrow-left'></p>
-                            </button>
-                        )
-                    }
-                    renderArrowNext={(onClickHandler, hasNext, label) =>
-                        hasNext && (
-                            <button type="button" onClick={onClickHandler} title={label} className="absolute h-[100px] md:h-[300px] lg:h-[100px] w-[30px] right-0 hover:bg-black opacity-20 hover:opacity-60 z-2 transition ease-in duration-350 carousel-customarrow">
-                                <p className='customArrow customArrow-right'></p>
-                            </button>
-                        )
-                    }
-                >
-                    {glimsImages.map((imgSrc, index) =>
-                    <div key={index}>
-                        <Image
-                            src={imgSrc}
-                            width={960}
-                            height={257}
-                            alt={''}
-                        />
-                    </div>)}
-                </Carousel>
+                <Youtube videoId='sibpJ7O4gBo' opts={opts} className='w-full lg:w-full aspect-video mb-2'/>
                 <div>
                     <h2 className={`mb-3 text-2xl text-center font-semibold`}>
-                        GLIMS{' '}
+                        Blender{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-md opacity-50`}>
-                        I was involved in multiple projects over the last 2 years contracting for the Jean Swainson Foundation. My work ranged from javascript programming in Playcanvas to Blueprint programming in Unreal Engine to 3D model creation using Blender. I Managed development of their online learning platform <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://afedsquad.co.nz/glims" target='_blank'>GLIMS</a> working closely with the lead programmer. I also got to a point where I could make small fixes and additions to the platform which uses Vue2.js.
+                        Apart from some minor 3d asset creation I was tasked with using Blender to create from real life building schematics a prefabricated building used for fire/police safety training. I recreated everything from the concrete foundation, studs/joists, stairs, walls and even an example wall which had their patented fire insulation which allows these buildings to be continuously lit on fire and put out by training fire fighters.
                     </p>
-                </div>
+                </div>                
             </div>
 
             <div className="grid text-center items-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
@@ -155,15 +129,43 @@ const Work = () => {
             </div>
 
             <div className="grid text-center items-center gap-x-5 lg:mb-0 lg:grid-cols-2 lg:text-left">
-                <Youtube videoId='sibpJ7O4gBo' opts={opts} className='w-full lg:w-full aspect-video mb-2'/>
+                { showModal1 && createPortal(
+                    <ImageModal onClose={() => setShowModal1(false)} imageSrc={glimsImages[currentImageIndex]}/>, document.body
+                )}
+                <Carousel infiniteLoop autoPlay className='mb-2' showThumbs={false} onClickItem={handleClick1}
+                    renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                        hasPrev && (
+                            <button type="button" onClick={onClickHandler} title={label} className="absolute h-[100px] md:h-[300px] lg:h-[100px] w-[30px] left-0 hover:bg-black z-10 opacity-20 hover:opacity-60 transition ease-in duration-350 carousel-customarrow">
+                                <p className='customArrow customArrow-left'></p>
+                            </button>
+                        )
+                    }
+                    renderArrowNext={(onClickHandler, hasNext, label) =>
+                        hasNext && (
+                            <button type="button" onClick={onClickHandler} title={label} className="absolute h-[100px] md:h-[300px] lg:h-[100px] w-[30px] right-0 hover:bg-black opacity-20 hover:opacity-60 z-2 transition ease-in duration-350 carousel-customarrow">
+                                <p className='customArrow customArrow-right'></p>
+                            </button>
+                        )
+                    }
+                >
+                    {glimsImages.map((imgSrc, index) =>
+                    <div key={index}>
+                        <Image
+                            src={imgSrc}
+                            width={960}
+                            height={257}
+                            alt={''}
+                        />
+                    </div>)}
+                </Carousel>
                 <div>
                     <h2 className={`mb-3 text-2xl text-center font-semibold`}>
-                        Blender{' '}
+                        GLIMS{' '}
                     </h2>
                     <p className={`m-0 max-w-full text-md opacity-50`}>
-                        Apart from some minor 3d asset creation I was tasked with using Blender to create from real life building schematics a prefabricated building used for fire/police safety training. I recreated everything from the concrete foundation to the studs/joists to stairs, walls and even an example wall which had their patented fire insulation which allows these buildings to be continuously lit on fire and put out buy training fire fighters.
+                        I was involved in multiple projects over the last 3 years I contracted for the Jean Swainson Foundation. My work ranged from javascript programming in Playcanvas to Blueprint programming in Unreal Engine to 3D model creation using Blender. I Managed development of their online learning platform <a className="underline font-semibold text-blue-600 bg-gray-100 hover:text-black hover:bg-white rounded px-1" href="https://afedsquad.co.nz/glims" target='_blank'>GLIMS</a> working closely with the lead programmer. I also got to a point where I could make small fixes and additions to the platform which uses Vue2.js.
                     </p>
-                </div>                
+                </div>
             </div>
 
             <div>
