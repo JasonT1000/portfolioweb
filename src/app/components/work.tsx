@@ -19,6 +19,7 @@ const Work = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
     const [carouselOneAutoPlay, setCarouselOneAutoPlay] = useState(true)
 
+    // Paths
     const glimsImages:string[] = ['/portfolioweb/GLIMS_web_1.jpg', '/portfolioweb/GLIMS_web_2.jpg', '/portfolioweb/GLIMS_web_3.jpg']
     const wacImages:string[] = ['/portfolioweb/WACStocktakerWeb.jpg']
 
