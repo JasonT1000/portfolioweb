@@ -26,9 +26,9 @@ const Info = () => {
             </div>
 
             <div className={'space-y-2'}>
-                <h3 className={`m-0 max-w-full text-md opacity-95`}>Through 2024</h3>
+                <h3 className={`m-0 max-w-full text-md opacity-95`}>Through 2024 and 2025</h3>
                 <p className={`m-0 max-w-full text-md opacity-70`}>
-                    Minor bug fixes, UI changes and keeping a few wordpress websites up to date. Otherwise working on an early childcare application.
+                    Minor bug fixes to existing apps, UI changes and keeping a few wordpress websites up to date. Otherwise I have been creating a few apps in React with Next.js. One of which allows the conversion of customer invoice data into a local database from a cloud based system to allow viewing of invoice data offline. Also updating my stock taking app to work with new cloud base Point Of Sale system. I Also started working on an early childcare web based application for a challenge.
                 </p>
             </div>
         </div> 
