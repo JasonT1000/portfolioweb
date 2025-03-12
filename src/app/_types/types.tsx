@@ -1,0 +1,20 @@
+export enum SkillsType {
+    TYPESCRIPT = 'Typescript',
+    TAILWIND = 'Tailwind',
+    HTML = 'HTML',
+    CSS = 'CSS',
+    JAVASCRIPT = 'Javascript',
+    VUE2JS = 'Vue2.js',
+    REST = 'REST',
+    NEXTJS = 'Next.js',
+    REACTJS = 'React.js',
+    REACTNATIVE = 'ReactNative',
+    JSON = 'JSON',
+    NODE = 'Node.js',
+    EXPRESS = 'Express',
+    POSTGRESQL = 'postgreSQL',
+    BLENDER = 'Blender',
+    UNREALFIVE = 'Unreal Engine 5',
+    UNREALFOUR = 'Unreal Engine 4',
+    PLAYCANVAS = 'Playcanvas'
+}
