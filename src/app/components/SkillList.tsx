@@ -4,7 +4,7 @@ interface Props {
     skills: SkillsType[]
 }
 
-const Work = (props: Props) => {
+const SkillList = (props: Props) => {
 
     return (
         <div className='flex flex-row flex-wrap gap-2 justify-center'>
@@ -17,4 +17,4 @@ const Work = (props: Props) => {
      );
 }
  
-export default Work;
+export default SkillList;

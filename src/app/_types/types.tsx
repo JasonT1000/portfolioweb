@@ -16,5 +16,6 @@ export enum SkillsType {
     BLENDER = 'Blender',
     UNREALFIVE = 'Unreal Engine 5',
     UNREALFOUR = 'Unreal Engine 4',
+    UNREALBLUEPRINTS = 'Unreal Blueprints',
     PLAYCANVAS = 'Playcanvas'
 }
