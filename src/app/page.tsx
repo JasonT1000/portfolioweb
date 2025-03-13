@@ -60,7 +60,7 @@ export default function Home() {
         <button className='absolute h-10 bottom-0 mb-3 text-2xl font-semibold' onClick={handleMobileNavClick}>Menu</button>
       }
       { isOnMobileDevice && showMobileNav &&
-        <div className="group absolute lg:h-auto hover:h-auto overflow-hidden bottom-0 lg:bottom-10 mb-12 lg:mb-0 grid text-center lg:grid-cols-5 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit bg-black/100 transition ease-in-out duration-300">
+        <div className="group absolute lg:h-auto hover:h-auto overflow-hidden bottom-0 lg:bottom-10 mb-5 lg:mb-0 grid text-center lg:grid-cols-5 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit bg-black/100 transition ease-in-out duration-300">
           <ButtonMain title={"Introduction"} description={"Just some info about this website"} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>
           <ButtonMain title={"Work"} description={"The projects I have worked on over the last few years for employers."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>
           <ButtonMain title={"Personal projects"} description={"Some personal projects I have been working on in my spare time."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection}/>

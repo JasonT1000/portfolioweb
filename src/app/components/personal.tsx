@@ -7,6 +7,7 @@ import { createPortal } from 'react-dom';
 import ImageModal from './ImageModal';
 import ContentSection from './ContentSection';
 import { SkillsType } from '../_types/types';
+import SkillList from './SkillList';
 
 const Personal = () => {
     // Image Paths
@@ -27,7 +28,7 @@ const Personal = () => {
                 sectionTitle='Unreal Engine'
                 sectionDescription='Learning Unreal Engine specifically for Virtual Reality has kept me pretty busy. An ongoing project has been recreating places from childhood in combination with movies/games that I grew up with. These are the first projects I made with no prior knowledge of Unreal Engine or Virtual reality or modelling. I had no experience with Blender and created some pretty bad models. I will be continuing on with this project shortly and hopefully can use my new skills and create some good stuff.'
                 skills={[SkillsType.UNREALFIVE, SkillsType.UNREALBLUEPRINTS, SkillsType.BLENDER, SkillsType.GIMPTWO]}
-                youtubeIds={['KwcxnjQw59g', 'XAEgGmiAOuE', 'D3BaPQ1JKSI']}
+                youtubeIds={['KwcxnjQw59g', '--J70RSk5uI', 'D3BaPQ1JKSI']}
             />
 
             <ContentSection
@@ -49,6 +50,7 @@ const Personal = () => {
                     <h2 className='mb-3 text-2xl text-center font-semibold'>
                         This website
                     </h2>
+                    <SkillList skills={[SkillsType.NEXTJS, SkillsType.TYPESCRIPT, SkillsType.TAILWIND, SkillsType.HTML, SkillsType.CSS]}/>
                     <p className="content-section-p">
                         I created this website using react.js, next.js, typescript and tailwindcss. I had played around with react.js a while ago when playing with some gesture recognition scripts, but nothing like this. Basically I didn&apos;t have a lot of experience in these frameworks and just wanted to have a play and see what they were like.
                     </p>

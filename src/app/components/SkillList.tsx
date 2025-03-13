@@ -13,10 +13,9 @@ const SkillList = (props: Props) => {
     }
 
     return (
-        <div className='flex flex-row flex-wrap gap-2 justify-center'>
+        <div className='flex flex-row flex-wrap gap-2 justify-center pb-2'>
             {
                 props.skills?.map((skill, index) => (
-                    // <span key={index} className='flex-none px-2 rounded-full bg-slate-700 text-center text-rose-400'>{skill}</span>
                     <span key={index} className={getRandomTextColorClass()}>{skill}</span>
                 ))
             }
