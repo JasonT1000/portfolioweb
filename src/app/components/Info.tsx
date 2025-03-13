@@ -1,6 +1,6 @@
 const Info = () => {
     return ( 
-        <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-right place-content-center space-y-10 px-5 lg:pr-5 scrollbar">
+        <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-right place-content-center space-y-10 px-5 pb-6 lg:pb-3 lg:pr-5 scrollbar">
             <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                 A little about my job experience{' '}
             </h2>

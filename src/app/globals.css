@@ -118,6 +118,12 @@ body {
   height: calc(100% - 223px);
 }
 
+.content-section-p{
+  margin: 0;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
 @media (max-width: 1024px) {
   .calculated-height{
     height: calc(100% - 130px);

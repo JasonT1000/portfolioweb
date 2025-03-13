@@ -26,23 +26,64 @@ const ContentSection = (props: Props) => {
 
     // State
     const [showModal1, setShowModal1] = useState(false)
-    const [showModal2, setShowModal2] = useState(false)
+    // const [showModal2, setShowModal2] = useState(false)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
+    // useEffect(() => {
+    //     console.log("youtubeid length")
+    //     console.log(props.youtubeIds?.length)
+    //     console.log("imagepath length")
+    //     console.log(props.imagePaths?.length)
+    //   }, [props])
 
     // Handlers
-    const handleClick1 = (index:number) =>{
-        setCurrentImageIndex(index)
-        if(window.innerWidth >= 1024){
-            setShowModal1(true)
-        }
+    // const handleClick1 = (index:number) =>{
+    //     setCurrentImageIndex(index)
+    //     if(window.innerWidth >= 1024){
+    //         setShowModal1(true)
+    //     }
+    // }
+    // const handleClick2 = (index:number) =>{
+    //     setCurrentImageIndex(index)
+    //     if(window.innerWidth >= 1024){
+    //         setShowModal2(true)
+    //     }
+    // }
+
+    const getCarouselChildren = (): React.ReactNode[] => {
+        return  [...createImageElements(), ...createYoutubeElements()]
     }
-    const handleClick2 = (index:number) =>{
-        setCurrentImageIndex(index)
-        if(window.innerWidth >= 1024){
-            setShowModal2(true)
+
+    const createYoutubeElements = (): React.ReactNode[] => {
+        if(props.youtubeIds && props.youtubeIds.length > 0){
+           return props.youtubeIds.map((youtubeId, index) => (
+                <div key={'youtube'+index}>
+                    <Youtube videoId={youtubeId} opts={opts} className='w-full lg:w-full aspect-video'/>
+                </div>
+            ))
         }
+
+        return []
     }
+    
+    const createImageElements = (): React.ReactNode[] => {
+        if(props.imagePaths && props.imagePaths.length > 0){
+            return props.imagePaths?.map((imgPath, index) => (
+                <div key={'image' + index}>
+                    <Image
+                        src={imgPath}
+                        width={960}
+                        height={257}
+                        alt={''}
+                    />
+                </div>
+            ))
+        }
+
+        return []
+    }
+
+    
 
     const getContentElement = () => {
 
@@ -68,14 +109,14 @@ const ContentSection = (props: Props) => {
                         <SkillList skills={props.skills}/>
                     </div>
                 </div>
-                <div className='grid text-center items-center gap-x-5 grid-rows-none lg:mb-0 lg:grid-cols-2 lg:text-left'>
+                <div className='grid text-center gap-x-5 grid-rows-none lg:mb-0 lg:grid-cols-2 lg:text-left'>
                     {
                         props.imagePaths && showModal1 && createPortal(
                             <ImageModal onClose={() => setShowModal1(false)} imageSrc={props.imagePaths[currentImageIndex]}/>, document.body
                         )
                     }
                     {
-                        props.youtubeIds && props.youtubeIds.length > 1 || props.imagePaths && props.imagePaths.length > 1?
+                        (props.youtubeIds && props.youtubeIds.length > 1) || (props.imagePaths && props.imagePaths.length > 1)?
                         (
                             <Carousel
                                 infiniteLoop
@@ -98,62 +139,18 @@ const ContentSection = (props: Props) => {
                                     )
                                 }
                             >
-                                {
-                                    props.imagePaths && props.imagePaths.map((imgPath, index) => (
-                                        <div key={'image' + index}>
-                                            <Image
-                                                src={imgPath}
-                                                width={960}
-                                                height={257}
-                                                alt={''}
-                                            />
-                                        </div>
-                                    ))
-                                }
-                                {
-                                    props.youtubeIds && props.youtubeIds.map((youtubeId, index) => (
-                                        <div key={'youtube'+index}>
-                                            <Youtube videoId={youtubeId} opts={opts} className='w-full lg:w-full aspect-video'/>
-                                        </div>
-                                    ))
-                                }
+                                {getCarouselChildren()}
+
                             </Carousel>
                         )
-
                         :
-
-                        getContentElement()
-                        // (
-                        //     props.youtubeIds?
-                        //     (
-                        //         <Youtube videoId={props.youtubeIds[0]} opts={opts} className='w-full lg:w-full aspect-video'/>
-
-                        //     )
-
-                        //     :
-                            
-                        //     (
-                        //         props.imagePaths?
-                        //         (
-                        //             <div>
-                        //                 <Image
-                        //                     src={props.imagePaths[0]}
-                        //                     width={960}
-                        //                     height={257}
-                        //                     alt={''}
-                        //                 />
-                        //             </div>
-                        //         )
-
-                        //         :
-
-                        //         null
-                        //     )
-                        // )
+                        (
+                            getContentElement()
+                        )
                     }
                     
                     <div>
-                        <p className='m-0 max-w-full text-md opacity-50'>
+                        <p className="content-section-p">
                             {props.sectionDescription}
                         </p>
                         {props.sectionDescriptionHTML}

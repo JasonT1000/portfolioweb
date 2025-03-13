@@ -5,7 +5,7 @@ export enum SkillsType {
     CSS = 'CSS',
     JAVASCRIPT = 'Javascript',
     VUE2JS = 'Vue2.js',
-    REST = 'REST',
+    REST = 'RESTful API',
     NEXTJS = 'Next.js',
     REACTJS = 'React.js',
     REACTNATIVE = 'ReactNative',
@@ -17,5 +17,9 @@ export enum SkillsType {
     UNREALFIVE = 'Unreal Engine 5',
     UNREALFOUR = 'Unreal Engine 4',
     UNREALBLUEPRINTS = 'Unreal Blueprints',
-    PLAYCANVAS = 'Playcanvas'
+    UNREALCPP = 'Unreal Engine C++',
+    PLAYCANVAS = 'Playcanvas',
+    EMBERGEN = 'EmberGen',
+    GIMPTWO = 'Gimp 2',
+    CSHARP = 'C#'
 }
