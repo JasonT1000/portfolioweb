@@ -16,9 +16,9 @@ const Work = () => {
 
             <ContentSection
                 sectionTitle='EXO POS report converter'
-                sectionDescription='After the business changed point of sale systems I was tasked with finding a way to view customer invoice data from the old system MYOB EXO after access to the web portal was shut down. I created a custom report to export customer warranty data, then created a NextJS webapp that could convert the .csv file into a local database. This allowed the business to view customer invoice data offline and on a local computer. I added functionality to search for specific invoices and view the data in a table format. Users can also print specific invoices if needed.'
-                skills={[SkillsType.NEXTJS, SkillsType.TYPESCRIPT, SkillsType.TAILWIND, SkillsType.REST, SkillsType.JSON]}
-                youtubeIds={['8WeSTRnORcY']}
+                sectionDescription='Following the company&apos;s transition to a new point-of-sale system, I was responsible for identifying a solution to access customer invoice data from the previous system, MYOB EXO, after the web portal was deactivated. I created a custom report to export customer warranty data, then created a NextJS webapp that could convert the .csv file into a local database. This allowed the business to view customer invoice data offline and on a local computer. I added functionality to search for specific invoices and view the data in a table format. Users can also print specific invoices if needed. I then recreated the webapp in Windows Forms using C# to allow businesses to use the application if they have older systems or dont want to install the aditional dependencies for the webapp'
+                skills={[SkillsType.NEXTJS, SkillsType.TYPESCRIPT, SkillsType.TAILWIND, SkillsType.REST, SkillsType.JSON, SkillsType.CSHARP]}
+                youtubeIds={['8WeSTRnORcY', 'LXO6ifQ4leA']}
             />
 
             <ContentSection

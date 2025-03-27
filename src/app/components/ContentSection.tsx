@@ -21,7 +21,8 @@ const ContentSection = (props: Props) => {
 
     const opts: YouTubeProps['opts'] = {
         width: '100%',
-        height: '100%'
+        height: '100%',
+        hostedByYoutube: true
     }
 
     // State
