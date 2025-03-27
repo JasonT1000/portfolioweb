@@ -22,12 +22,9 @@ const ContentSection = (props: Props) => {
     const opts: YouTubeProps['opts'] = {
         width: '100%',
         height: '100%',
-        // hostedByYoutube: true,
         host: 'https://www.youtube.com',
-        playerVars: {
-            'origin': 'https://jasont1000.github.io/portfolioweb/',
-            'widget_referrer': 'https://jasont1000.github.io/portfolioweb/',
-        },
+        origin: 'https://jasont1000.github.io/portfolioweb/',
+        widget_referrer: 'https://jasont1000.github.io/portfolioweb/',
     }
 
     // State
