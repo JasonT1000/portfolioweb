@@ -1,5 +1,5 @@
 const Introduction = () => {
-    return ( 
+    return (
         <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-right place-content-center space-y-10 px-5 lg:pr-5 scrollbar">
             <h2 className={`mb-3 text-2xl text-center font-semibold`}>
                 About This website{' '}
@@ -7,7 +7,7 @@ const Introduction = () => {
             <div className={'space-y-2'}>
                 <h3 className={`m-0 max-w-full text-md opacity-95`}>Coder</h3>
                 <p className={`m-0 max-w-full text-md opacity-70`}>
-                    Hi my name is Jason and this is my portfolio website. A collection of projects I have been apart of for work and some personal projects I have embarked on in my spare time.
+                    Hi my name is Jason and this is my portfolio website. A collection of projects I have been a part of for work and some personal projects I have embarked on in my spare time.
                 </p>
             </div>
             <div className={'space-y-2'}>
@@ -20,7 +20,7 @@ const Introduction = () => {
                 </p>
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default Introduction;

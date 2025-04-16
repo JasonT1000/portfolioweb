@@ -5,25 +5,25 @@ import ContentSection from './ContentSection';
 
 const Work = () => {
     // Image Paths
-    const glimsImages:string[] = ['/portfolioweb/GLIMS_web_1.jpg', '/portfolioweb/GLIMS_web_2.jpg', '/portfolioweb/GLIMS_web_3.jpg']
+    const glimsImages: string[] = ['/portfolioweb/GLIMS_web_1.jpg', '/portfolioweb/GLIMS_web_2.jpg', '/portfolioweb/GLIMS_web_3.jpg']
 
     return (
         <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-right place-content-center space-y-20 px-5 pb-6 lg:pb-3 lg:pr-5 scrollbar">
-            
+
             <h1 className={`text-3xl text-center font-semibold mb-8`}>
                 Wairoa Appliance Centre{' '}
             </h1>
 
             <ContentSection
                 sectionTitle='EXO POS report converter'
-                sectionDescription='Following the company&apos;s transition to a new point-of-sale system, I was responsible for identifying a solution to access customer invoice data from the previous system, MYOB EXO, after the web portal was deactivated. I created a custom report to export customer warranty data, then created a NextJS webapp that could convert the .csv file into a local database. This allowed the business to view customer invoice data offline and on a local computer. I added functionality to search for specific invoices and view the data in a table format. Users can also print specific invoices if needed. I then recreated the webapp in Windows Forms using C# to allow businesses to use the application if they have older systems or dont want to install the aditional dependencies for the webapp'
+                sectionDescription='For a small retail appliance shop in Wairoa called Wairoa Appliance Centre I was responsible for identifying a solution to access customer invoice data from the previous point of sale system, MYOB EXO, after the web portal was deactivated. I created a custom report to export customer warranty data, then created a NextJS webapp that could convert the .csv file into a local database. This allowed the business to view customer invoice data offline and on a local computer. I added functionality to search for specific invoices and view the data in a table format. Users can also print specific invoices if needed. I then recreated the webapp in Windows Forms using C# to allow businesses to use the application if they have older systems or dont want to install the aditional dependencies for the webapp'
                 skills={[SkillsType.NEXTJS, SkillsType.TYPESCRIPT, SkillsType.TAILWIND, SkillsType.REST, SkillsType.JSON, SkillsType.CSHARP]}
                 youtubeIds={['8WeSTRnORcY', 'LXO6ifQ4leA']}
             />
 
             <ContentSection
                 sectionTitle='Web & Android App'
-                sectionDescription='For a small retail appliance shop in Wairoa called Wairoa Appliance Centre I am creating a stock taking application for Web previously written with HTML, javascript and CSS. I have rewritten it in React with Typescript and created a Nodejs server which will run along side it. I also created an accompanying Android application coded with ReactNative. I also setup and maintain their Wordpress website.'
+                sectionDescription='For the same retail appliance shop I created a stock taking web application previously written with HTML, javascript and CSS. I rewrote it in React with Typescript and created a Nodejs server which runs along side it. I also created an accompanying Android application coded with ReactNative which lets employees use their phones as scanners to upload stock counts to the main pc app. I also setup and maintained their Wordpress website.'
                 skills={[SkillsType.REACTJS, SkillsType.REACTNATIVE, SkillsType.TYPESCRIPT, SkillsType.CSS, SkillsType.REST, SkillsType.NODE, SkillsType.JSON]}
                 youtubeIds={['x6I5056uxFo', 'xjbrUTmjmmo']}
             />
@@ -67,7 +67,7 @@ const Work = () => {
                 imagePaths={glimsImages}
             />
         </div>
-     );
+    );
 }
- 
+
 export default Work;

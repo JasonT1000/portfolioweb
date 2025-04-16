@@ -11,9 +11,9 @@ import SkillList from './SkillList';
 
 const Personal = () => {
     // Image Paths
-    const blenderImages:string[] = ['/portfolioweb/Anvil1_a.png', '/portfolioweb/Axe_1.png', '/portfolioweb/AnvilAxe_1.png', '/portfolioweb/AnvilAxe_4.png']
+    const blenderImages: string[] = ['/portfolioweb/Anvil1_a.png', '/portfolioweb/Axe_1.png', '/portfolioweb/AnvilAxe_1.png', '/portfolioweb/AnvilAxe_4.png']
 
-    return ( 
+    return (
         <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-left place-content-center space-y-10 px-5 pb-6 lg:pb-3 lg:pr-5 scrollbar">
 
             <ContentSection
@@ -33,7 +33,7 @@ const Personal = () => {
 
             <ContentSection
                 sectionTitle='PERN stack'
-                sectionDescription='Half serious and half playing around I started a project for an early childcare centre as the software solutions they had tried did not do the things that they required. So just to see if i can do it I started with an interview with the manager of a local early child care centre. Then went about doing research on what was needed ie integration with government systems, database creation, backend routes. I then did some short online tutorials as I hadn&apos;t done relational databases since university. I designed the UI using AI tools which was a useful learning experience and very helpful. I then started using AI tools to help with coding which I found to be a useful tool. This is still very much a work in progress and after starting with the database and backend routes I have only just started the front end development. The frontend has been done using Reactjs with Typescript. The database is postgreSQL with nodejs express server as the backend.'
+                sectionDescription='I started a project for an early childcare centre as the software solutions they had tried did not do the things that they required. So just to see if i can do it I started with an interview with the manager of a local early child care centre. Then went about doing research on what was needed ie integration with government systems, database creation, backend routes. I then did some short online tutorials as I hadn&apos;t done relational databases since university. I designed the UI using AI tools which was a useful learning experience and very helpful. This is still very much a work in progress and after starting with the database and backend routes I have only just started the front end development. The frontend has been done using Reactjs with Typescript. The database is postgreSQL with nodejs express server as the backend.'
                 skills={[SkillsType.REACTJS, SkillsType.TYPESCRIPT, SkillsType.HTML, SkillsType.CSS, SkillsType.NODE, SkillsType.EXPRESS, SkillsType.POSTGRESQL, SkillsType.REST]}
                 youtubeIds={['BTARnn9_brI']}
             />
@@ -50,14 +50,14 @@ const Personal = () => {
                     <h2 className='mb-3 text-2xl text-center font-semibold'>
                         This website
                     </h2>
-                    <SkillList skills={[SkillsType.NEXTJS, SkillsType.TYPESCRIPT, SkillsType.TAILWIND, SkillsType.HTML, SkillsType.CSS]}/>
+                    <SkillList skills={[SkillsType.NEXTJS, SkillsType.TYPESCRIPT, SkillsType.TAILWIND, SkillsType.HTML, SkillsType.CSS]} />
                     <p className="content-section-p">
                         I created this website using react.js, next.js, typescript and tailwindcss. I had played around with react.js a while ago when playing with some gesture recognition scripts, but nothing like this. Basically I didn&apos;t have a lot of experience in these frameworks and just wanted to have a play and see what they were like.
                     </p>
                 </div>
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default Personal;
