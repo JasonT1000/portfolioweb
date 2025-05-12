@@ -18,7 +18,7 @@ const Personal = () => {
 
             <ContentSection
                 sectionTitle='Blender'
-                sectionDescription='I have been learning Blender for work and in my spare time. I started by watching the now world renowned &apos;Donut&apos; video. After completing that challenge I tried an Anvil then picked my own object to model which was an axe which I had in the tool shed. Going from taking reference photos to the modelling process to rendering was a lot of fun.'
+                sectionDescription='I started by watching the now world renowned &apos;Donut&apos; tutorial. After completing that challenge I tried the Anvil then picked my own object to model which was an axe I had in the tool shed. Going through the whole design process from taking reference photos to modelling and rendering was a lot of fun.'
                 skills={[SkillsType.BLENDER, SkillsType.GIMPTWO]}
                 youtubeIds={['lev39HNa8nU']}
                 imagePaths={blenderImages}

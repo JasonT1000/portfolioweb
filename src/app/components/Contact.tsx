@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 const Contact = () => {
-    return ( 
+    return (
         <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-left place-content-center space-y-10 px-5 lg:pr-5 scrollbar">
             <div>
                 <h2 className={`mb-3 text-2xl text-center font-semibold`}>
@@ -25,11 +25,18 @@ const Contact = () => {
                     <div>
                         <a href="https://github.com/JasonT1000" target='_blank' className='w-fit flex-initial flex items-center float-left lg:hover:bg-white/50 rounded'>
                             <Image
+                                src={'/portfolioweb/github-mark.png'}
+                                width={34}
+                                height={33}
+                                alt={''}
+                                className='float-left dark:hidden'
+                            />
+                            <Image
                                 src={'/portfolioweb/github-mark-white.png'}
                                 width={34}
                                 height={33}
                                 alt={''}
-                                className='float-left'
+                                className='float-left hidden dark:block'
                             />
                             <p className={`m-0 pr-4 pl-2 max-w-full float-left text-md opacity-50`}>
                                 Github
@@ -57,7 +64,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default Contact;
