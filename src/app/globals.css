@@ -18,16 +18,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   overflow: hidden;
 }
 
-/* ------------------------ Slide animation -----------------------------*/
+/* ---------------------------- Slide animation -------------------------------*/
 
 .slide-in {
   position: absolute;
@@ -80,52 +77,54 @@ body {
   background: #c0a0b99c;
 }
 
-/* ------------------------ Carosel -----------------------------*/
+/* ------------------------------- Carosel ----------------------------------*/
 
-.carousel .slide iframe{
+.carousel .slide iframe {
   width: 100% !important;
   margin: 0 !important;
 }
 
-.carousel-customarrow{
+.carousel-customarrow {
   top: calc(50% - 50px);
 }
 
-.customArrow{
+.customArrow {
   display: inline-block;
   border: solid white;
   border-width: 0 3px 3px 0;
   padding: 3px;
 }
+
 .customArrow-right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
+
 .customArrow-left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .carousel-customarrow{
+  .carousel-customarrow {
     top: calc(50% - 150px);
   }
 }
 
 /* ------------------------ Content Sections -----------------------------*/
 
-.calculated-height{
+.calculated-height {
   height: calc(100% - 223px);
 }
 
-.content-section-p{
+.content-section-p {
   margin: 0;
   max-width: 100%;
   opacity: 0.8;
 }
 
 @media (max-width: 1024px) {
-  .calculated-height{
+  .calculated-height {
     height: calc(100% - 130px);
   }
 }
