@@ -5,7 +5,7 @@ import ContentSection from './ContentSection';
 
 const Work = () => {
     // Image Paths
-    const glimsImages: string[] = ['/portfolioweb/GLIMS_web_1.jpg', '/portfolioweb/GLIMS_web_2.jpg', '/portfolioweb/GLIMS_web_3.jpg']
+    const glimsImages: string[] = ['/GLIMS_web_1.jpg', '/GLIMS_web_2.jpg', '/GLIMS_web_3.jpg']
 
     return (
         <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-right place-content-center space-y-20 px-5 pb-6 lg:pb-3 lg:pr-5 scrollbar">

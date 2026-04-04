@@ -21,7 +21,7 @@ export default function Home() {
   const [activePageSection, setActivePageSection] = useState(PageSection.introduction)
   const [isOnMobileDevice, setIsOnMobileDevice] = useState(false)
   const [showMobileNav, setShowMobileNav] = useState(false)
-  const iconSrc: string = '/portfolioweb/menu-burger.svg'
+  const iconSrc: string = '/menu-burger.svg'
   // const iconSrc: string = '/menu-burger.svg'
 
   const updateActivePageSection = (activePageSection: PageSection) => {
