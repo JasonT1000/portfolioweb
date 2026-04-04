@@ -1,37 +1,29 @@
 /** @type {import('next').NextConfig} */
 
-// const isProd = process.env.NODE_ENV === 'production'
 
-// const nextConfig = {
-//     output: isProd ? 'export' : 'standalone',
-//     images: {
-//         unoptimized: true,
-//     },
-//     basePath: isProd ? '/portfolioweb' : '',
-//     assetPrefix: isProd ? '/portfolioweb' : '',
-//     eslint: {
-//         ignoreDuringBuilds: true,
-//     },
-// }
+const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
-// module.exports = nextConfig
+module.exports = (phase, { defaultConfig }) => {
+    // Check if the current phase is the development build
+    if (phase === PHASE_DEVELOPMENT_SERVER) {
+        return {
+            output: 'standalone',
+            images: {
+                unoptimized: true,
+            },
+        }
+    }
 
-const { PHASE_PRODUCTION_BUILD } = require('next/constants')
-
-module.exports = (phase) => {
-    // Check if the current phase is the production build
-    const isProd = phase === PHASE_PRODUCTION_BUILD
-
+    // Config options for all phases except development
     return {
-        output: isProd ? 'export' : 'standalone',
+        output: 'export',
         images: {
             unoptimized: true,
         },
-        basePath: isProd ? '/portfolioweb' : '',
-        assetPrefix: isProd ? '/portfolioweb' : '',
+        basePath: '/portfolioweb',
+        assetPrefix: '/portfolioweb',
         eslint: {
             ignoreDuringBuilds: true,
         },
     }
 }
-
