@@ -22,7 +22,7 @@ export default function Home() {
   const [isOnMobileDevice, setIsOnMobileDevice] = useState(false)
   const [showMobileNav, setShowMobileNav] = useState(false)
   const iconSrc: string = '/portfolioweb/menu-burger.svg'
-  //const iconSrc: string = '../../public/menu-burger.svg'
+  // const iconSrc: string = '/menu-burger.svg'
 
   const updateActivePageSection = (activePageSection: PageSection) => {
     setActivePageSection(activePageSection)
@@ -60,7 +60,7 @@ export default function Home() {
           <ButtonMain title={"Contact"} description={"Ways to contact me."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
         </div>}
       {isOnMobileDevice && !showMobileNav &&
-        <button className='absolute h-10 bottom-0 mb-3 text-2xl font-semibold' onClick={handleMobileNavClick}><Image src={iconSrc} alt={''} /></button>
+        <button className='absolute h-10 bottom-0 mb-3 text-2xl font-semibold' onClick={handleMobileNavClick}><Image src={iconSrc} alt={''} width={30} height={30} /></button>
       }
       {isOnMobileDevice && showMobileNav &&
         <div className="group absolute lg:h-auto hover:h-auto overflow-hidden bottom-0 lg:bottom-10 mb-3 lg:mb-0 grid text-center lg:grid-cols-5 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit bg-black/100 transition ease-in-out duration-300">
@@ -69,7 +69,7 @@ export default function Home() {
           <ButtonMain title={"Personal projects"} description={"Some personal projects I have been working on in my spare time."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
           <ButtonMain title={"Info"} description={"Some of my personal info."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
           <ButtonMain title={"Contact"} description={"Ways to contact me."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
-          <button className='flex justify-center h-10 text-2xl font-semibold' onClick={e => setShowMobileNav(false)}><Image src={iconSrc} alt={''} /></button>
+          <button className='flex justify-center h-10 text-2xl font-semibold' onClick={e => setShowMobileNav(false)}><Image src={iconSrc} alt={''} width={30} height={30} /></button>
         </div>
       }
     </main>
