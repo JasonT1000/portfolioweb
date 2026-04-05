@@ -1,23 +1,21 @@
 /** @type {import('next').NextConfig} */
 
-const { PHASE_PRODUCTION_BUILD } = require('next/constants')
+const isProd = process.env.NODE_ENV === 'production'
 
-module.exports = (phase) => {
-    // Check if the current phase is the production build
-    const isProd = phase === PHASE_PRODUCTION_BUILD
-
-    return {
-        output: isProd ? 'export' : '',
-        images: {
-            unoptimized: true,
-        },
-        basePath: isProd ? '/portfolioweb' : '',
-        assetPrefix: isProd ? '/portfolioweb' : '',
-        eslint: {
-            ignoreDuringBuilds: true,
-        },
-    }
+const nextConfig = {
+    output: 'export', //comment out this when publishing to github
+    output: isProd ? 'export' : '',
+    images: {
+        unoptimized: true,
+    },
+    basePath: isProd ? '/portfolioweb' : '',
+    assetPrefix: isProd ? '/portfolioweb' : '',
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 }
+
+module.exports = nextConfig
 
 // //Prod mode
 // const nextConfig = {
