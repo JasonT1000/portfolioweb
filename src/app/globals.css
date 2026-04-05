@@ -32,7 +32,7 @@ body {
 }
 
 .from-left {
-  left: 100;
+  /* left: 100; */
   transform: translateX(-200%);
   animation: slide-in-left 0.5s forwards;
 }
@@ -44,7 +44,7 @@ body {
 }
 
 .from-right {
-  right: 100;
+  /* right: 100; */
   transform: translateX(200%);
   animation: slide-in-right 0.5s forwards;
 }

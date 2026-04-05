@@ -19,25 +19,13 @@ export default function Home() {
   }
 
   const [activePageSection, setActivePageSection] = useState(PageSection.introduction)
-  const [isOnMobileDevice, setIsOnMobileDevice] = useState(false)
   const [showMobileNav, setShowMobileNav] = useState(false)
   const iconSrc: string = '/menu-burger.svg'
-  // const iconSrc: string = '/menu-burger.svg'
 
   const updateActivePageSection = (activePageSection: PageSection) => {
     setActivePageSection(activePageSection)
     setShowMobileNav(false)
   }
-
-  const handleMobileNavClick = () => {
-    setShowMobileNav(true)
-  }
-
-  useEffect(() => {
-    if (window.innerWidth <= 1036) {
-      setIsOnMobileDevice(true)
-    }
-  }, [])
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-16 overflow-hidden">
@@ -50,28 +38,26 @@ export default function Home() {
       {activePageSection === PageSection.info && <Info />}
       {activePageSection === PageSection.contact && <Contact />}
 
-      {!isOnMobileDevice &&
-        <div className="group absolute h-10 lg:h-auto hover:h-auto overflow-hidden bottom-0 lg:bottom-10 mb-12 lg:mb-0 grid text-center lg:grid-cols-5 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit transition ease-in-out duration-300">
-          <button className='group-hover:hidden lg:hidden mb-3 text-2xl font-semibold'>Menu</button>
+      <div className="hidden group absolute lg:h-auto hover:h-auto overflow-hidden bottom-10 mb-3 lg:mb-0 md:grid text-center lg:grid-cols-5 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit bg-black/100 transition ease-in-out duration-300">
+        <ButtonMain title={"Introduction"} description={"Just some info about this website"} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
+        <ButtonMain title={"Work"} description={"The projects I have worked on over the last few years for employers."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
+        <ButtonMain title={"Personal projects"} description={"Some personal projects I have been working on in my spare time."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
+        <ButtonMain title={"Info"} description={"Some of my personal info."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
+        <ButtonMain title={"Contact"} description={"Ways to contact me."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
+      </div>
+
+      {
+        showMobileNav &&
+        <div className="md:hidden absolute hover:h-auto overflow-hidden bottom-10 mb-3 grid text-center rounded-lg hover:bg-black/90 bg-black/100 transition ease-in-out duration-300">
           <ButtonMain title={"Introduction"} description={"Just some info about this website"} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
           <ButtonMain title={"Work"} description={"The projects I have worked on over the last few years for employers."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
           <ButtonMain title={"Personal projects"} description={"Some personal projects I have been working on in my spare time."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
           <ButtonMain title={"Info"} description={"Some of my personal info."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
           <ButtonMain title={"Contact"} description={"Ways to contact me."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
-        </div>}
-      {isOnMobileDevice && !showMobileNav &&
-        <button className='absolute h-10 w-auto bottom-0 mb-3 text-2xl font-semibold' onClick={handleMobileNavClick}><Image src={iconSrc} alt={''} width={30} height={30} /></button>
-      }
-      {isOnMobileDevice && showMobileNav &&
-        <div className="group absolute lg:h-auto hover:h-auto overflow-hidden bottom-0 lg:bottom-10 mb-3 lg:mb-0 grid text-center lg:grid-cols-5 lg:text-left rounded-lg hover:bg-black/90 hover:lg:bg-inherit bg-black/100 transition ease-in-out duration-300">
-          <ButtonMain title={"Introduction"} description={"Just some info about this website"} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
-          <ButtonMain title={"Work"} description={"The projects I have worked on over the last few years for employers."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
-          <ButtonMain title={"Personal projects"} description={"Some personal projects I have been working on in my spare time."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
-          <ButtonMain title={"Info"} description={"Some of my personal info."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
-          <ButtonMain title={"Contact"} description={"Ways to contact me."} updateActivePageSection={updateActivePageSection} activePageSection={activePageSection} />
-          <button className='flex justify-center h-10 w-auto text-2xl font-semibold' onClick={e => setShowMobileNav(false)}><Image src={iconSrc} alt={''} width={30} height={30} /></button>
         </div>
       }
+
+      <button className='absolute flex justify-center lg:hidden bottom-2 h-10 w-auto text-2xl font-semibold' onClick={() => setShowMobileNav(!showMobileNav)}><Image src={iconSrc} alt={''} width={30} height={30} /></button>
     </main>
   )
 }
