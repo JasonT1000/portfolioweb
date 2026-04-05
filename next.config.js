@@ -1,34 +1,17 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === 'production'
-
+//Prod mode
 const nextConfig = {
-    output: 'export', //comment out this when publishing to github
-    output: isProd ? 'export' : '',
+    output: 'export',
     images: {
         unoptimized: true,
     },
-    basePath: isProd ? '/portfolioweb' : '',
-    assetPrefix: isProd ? '/portfolioweb' : '',
+    basePath: '/portfolioweb',
+    assetPrefix: '/portfolioweb',
     eslint: {
         ignoreDuringBuilds: true,
     },
 }
-
-module.exports = nextConfig
-
-// //Prod mode
-// const nextConfig = {
-//     output: 'export',
-//     images: {
-//         unoptimized: true,
-//     },
-//     basePath: '/portfolioweb',
-//     assetPrefix: '/portfolioweb',
-//     eslint: {
-//         ignoreDuringBuilds: true,
-//     },
-// }
 
 // // Dev mode
 // // const nextConfig = {
