@@ -21,5 +21,6 @@ export enum SkillsType {
     PLAYCANVAS = 'Playcanvas',
     EMBERGEN = 'EmberGen',
     GIMPTWO = 'Gimp 2',
-    CSHARP = 'C#'
+    CSHARP = 'C#',
+    SQLITE = 'SQLite'
 }

@@ -17,6 +17,13 @@ const Personal = () => {
         <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-left place-content-center space-y-10 px-5 pb-6 lg:pb-3 lg:pr-5 scrollbar">
 
             <ContentSection
+                sectionTitle='Workout Tracker'
+                sectionDescription='I have embarked on the journey of creating a workout tracker that so I could get an idea of my workout progress and get a visual representation of my progress. I have yet to start the statistics section of the app which will show a body heatmap of body parts that have been worked out for the week and some graphs for sets, weights and exercise progress. I tried out SQLite for the database on this project.'
+                skills={[SkillsType.REACTNATIVE, SkillsType.SQLITE]}
+                youtubeIds={['wsbCZHsfQjs']}
+            />
+
+            <ContentSection
                 sectionTitle='Blender'
                 sectionDescription='I started by watching the now world renowned &apos;Donut&apos; tutorial. After completing that challenge I tried the Anvil then picked my own object to model which was an axe I had in the tool shed. Going through the whole design process from taking reference photos to modelling and rendering was a lot of fun.'
                 skills={[SkillsType.BLENDER, SkillsType.GIMPTWO]}
