@@ -11,7 +11,7 @@ import SkillList from './SkillList';
 
 const Personal = () => {
     // Image Paths
-    const blenderImages: string[] = ['/Anvil1_a.png', '/Axe_1.png', '/AnvilAxe_1.png', '/AnvilAxe_4.png']
+    const blenderImages: string[] = ['/portfolioweb/Anvil1_a.png', '/portfolioweb/Axe_1.png', '/portfolioweb/AnvilAxe_1.png', '/portfolioweb/AnvilAxe_4.png']
 
     return (
         <div className="overflow-y-auto calculated-height lg:w-[900px] slide-in from-left place-content-center space-y-10 px-5 pb-6 lg:pb-3 lg:pr-5 scrollbar">

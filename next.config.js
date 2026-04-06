@@ -7,7 +7,7 @@ const nextConfig = {
         unoptimized: true,
     },
     basePath: '/portfolioweb',
-    assetPrefix: '/portfolioweb',
+    assetPrefix: '/portfolioweb/',
 }
 
 // Dev mode
